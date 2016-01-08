@@ -1,0 +1,7 @@
+{
+  "source": "./src",
+  "destination": "./reports/doc/web",
+  "plugins": [
+    {"name": "esdoc-es7-plugin"}
+  ]
+}

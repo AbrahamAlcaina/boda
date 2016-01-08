@@ -1,0 +1,39 @@
+.container {
+  .welcome {
+    position: absolute;
+    top: 10%;
+    z-index: 2;
+    font-family: Roboto, sans-serif;
+    font-size: 150px;
+    color: white;
+    display: inline;
+    width: 100%;
+    text-align: center;
+  }
+  .welcomeBody {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding: 20px;
+    box-shadow: 0 0 20px black;
+  }
+  .bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      min-width: 50%;
+      min-height: 50%;
+    }
+  }
+}

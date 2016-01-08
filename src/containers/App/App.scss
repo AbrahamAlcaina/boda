@@ -1,0 +1,21 @@
+.app {
+  background: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
+  .brand {
+    position: absolute;
+    $size: 40px;
+    top: 5px;
+    left: 5px;
+    display: inline-block;
+    width: $size;
+    height: $size;
+    background-size: 100%;
+    margin: 0 0 0 0;
+    border-radius: $size / 2;
+  }
+  nav :global(.fa) {
+    font-size: 2em;
+    line-height: 20px;
+  }
+}
+.appContent {
+}
