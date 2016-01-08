@@ -15,7 +15,7 @@
     "canvas"
   ],
   "scripts": {
-    "start": "npm run start-prod",
+    "start": "node ./server.js",
     "start-prod": "node ./node_modules/better-npm-run start-prod",
     "build": "node_modules/.bin/webpack --verbose --colors --display-error-details --config webpack/prod.config.js",
     "postinstall": "webpack --display-error-details --config webpack/prod.config.js",
@@ -80,19 +80,6 @@
       "command": "npm run test-karma && npm run test-node",
       "env": {}
     },
-    "start-prod": {
-      "command": "node ./server.js",
-      "env": {
-        "NODE_PATH": "./src",
-        "NODE_ENV": "production",
-        "PORT": 8080,
-        "FB_APP_ID": "194914080843962",
-        "FB_APP_SECRET": "9c621422e9a083a7f3961e46ae2825ea",
-        "BASE_URL": "http://localhost:8080",
-        "APIPROTOCOL": "http",
-        "APISERVER": "fb-mycasino-api.azurewebsites.net"
-      }
-    },
     "start-dev": {
       "command": "node ./server.js",
       "env": {
@@ -115,13 +102,6 @@
         "FB_APP_SECRET": "9c621422e9a083a7f3961e46ae2825ea",
         "APIPROTOCOL": "http",
         "APISERVER": "fb-mycasino-api.azurewebsites.net"
-      }
-    },
-    "e2e": {
-      "command": "node ./node_modules/mocha/bin/mocha ./e2e/**/*.js --compilers js:babel-core/register --require mocha-generators ./e2e/helper.js ",
-      "env": {
-        "DEBUG": "nightmare",
-        "SHOW": "true"
       }
     }
   },
