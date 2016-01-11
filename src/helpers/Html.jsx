@@ -26,6 +26,9 @@ class Html extends Component {
   render() {
     const {locale, localeData, localeMessages, assets, component, store, css} = this.props;
     const content = component ? ReactDOM.renderToString(component) : '';
+    const style = {
+      height: '100%'
+    }
     const data = {
       store: store.getState(),
       locale: locale,
@@ -39,7 +42,7 @@ class Html extends Component {
     )}
     */
     return (
-      <html lang={locale}>
+      <html lang={locale} style={style}>
         <head>
           <link rel="dns-prefetch" href={process.env.CDN} />
           <link rel="dns-prefetch" href={process.env.API_URL} />
@@ -55,7 +58,7 @@ class Html extends Component {
           {/* outputs a <style/> tag with all bootstrap styles + App.scss + it could be CurrentPage.scss. */}
           {/* can smoothen the initial style flash (flicker) on page load in development mode. */}
           {/* ideally one could also include here the style for the current page (Home.scss, About.scss, etc) */}
-          { Object.keys(assets.styles).length === 0 ? <style dangerouslySetInnerHTML={{__html: require('../theme/bootstrap.config.js') + require('../containers/App/App.scss')._style}}/> : null }
+          { Object.keys(assets.styles).length === 0 ? <style dangerouslySetInnerHTML={{__html: require('bootstrap-loader/no-op') + require('../containers/App/App.scss')._style}}/> : null }
         </head>
         <body>
           <div id="content" dangerouslySetInnerHTML={{__html: content}}/>

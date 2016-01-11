@@ -14,31 +14,28 @@ module.exports = Object.assign({
   port: process.env.PORT,
   apiProtocol: process.env.APIPROTOCOL,
   app: {
-    title: 'React Redux Example',
-    description: 'All the modern best practices in one example.',
+    title: 'Nicole & Abraham weeding',
+    description: 'Aquí encontrarás toda la información relacionada con nuestra boda.',
     meta: {
       charSet: 'utf-8',
       property: {
-        'og:site_name': 'React Redux Example',
-        'og:image': 'https://react-redux.herokuapp.com/logo.jpg',
-        'og:locale': 'en_US',
-        'og:title': 'React Redux Example',
-        'og:description': 'All the modern best practices in one example.',
+        'og:site_name': 'Nicole i Abraham',
+        'og:image': 'https://nicoleiabraham/logo.jpg',
+        'og:locale': 'es_CA',
+        'og:title': 'Nicole i Abraham ',
+        'og:description': 'Aquí encontrarás toda la información relacionada con nuestra boda.',
         'twitter:card': 'summary',
-        'twitter:site': '@erikras',
-        'twitter:creator': '@erikras',
-        'twitter:title': 'React Redux Example',
-        'twitter:description': 'All the modern best practices in one example.',
-        'twitter:image': 'https://react-redux.herokuapp.com/logo.jpg',
+        'twitter:site': '@abrahamalcaian',
+        'twitter:creator': '@abrahamalacaina',
+        'twitter:title': 'Nicole i Abraham',
+        'twitter:description': 'Aquí encontrarás toda la información relacionada con nuestra boda.',
+        'twitter:image': 'https://nicoleiabraham/logo.jpg',
         'twitter:image:width': '200',
         'twitter:image:height': '200'
       }
     }
   },
-  locale: 'en',
-  locales: ['en', 'es'],
-  FB_APP_ID: process.env.FB_APP_ID,
-  APISERVER: process.env.APISERVER,
-  APIPROTOCOL: process.env.APIPROTOCOL
+  locale: 'ca',
+  locales: ['en', 'es', 'ca']
 }, environment);
 /* eslint-enable  */

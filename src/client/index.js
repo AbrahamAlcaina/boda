@@ -2,17 +2,17 @@
  * THIS IS THE ENTRY POINT FOR THE CLIENT, JUST LIKE server.js IS THE ENTRY POINT FOR THE SERVER.
  */
 import 'babel-polyfill';
-import './client/reactTapEventPlugin';
+import './reactTapEventPlugin';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import createHistory from 'history/lib/createBrowserHistory';
-import createStore from './redux/create';
-import ApiClient from './helpers/ApiClient';
+import createStore from '../redux/create';
+import ApiClient from '../helpers/ApiClient';
 import { Provider } from 'react-redux';
 import { reduxReactRouter, ReduxRouter } from 'redux-router';
 import { addLocaleData, IntlProvider } from 'react-intl';
-import getRoutes from './routes';
-import makeRouteHooksSafe from './helpers/makeRouteHooksSafe';
+import getRoutes from '../routes';
+import makeRouteHooksSafe from '../helpers/makeRouteHooksSafe';
 
 
 const client = new ApiClient();
@@ -50,7 +50,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 if (__DEVTOOLS__ && !window.devToolsExtension) {
-  const DevTools = require('./containers/DevTools/DevTools');
+  const DevTools = require('../containers/DevTools/DevTools');
   ReactDOM.render(
     <Provider store={store} key="provider">
       <div>
