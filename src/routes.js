@@ -4,9 +4,7 @@ import { isLoaded as isAuthLoaded } from 'redux/modules/auth';
 import {
     App,
     Home,
-    Shop,
-    Splash,
-    NotFound,
+    NotFound
   } from 'containers';
 
 export default (store) => {
@@ -32,13 +30,10 @@ export default (store) => {
   return (
     <Route path="/" component={App}>
       { /* Splash (main) route */ }
-      <IndexRoute component={Splash}/>
+      <IndexRoute component={Home}/>
 
       { /* Routes requiring login */ }
-      <Route onEnter={requireLogin}>
-        <Route path="home" component={Home}/>
-        <Route path="shop" component={Shop}/>
-      </Route>
+      <Route onEnter={requireLogin} />
 
       { /* Catch all route */ }
       <Route path="*" component={NotFound} status={404} />

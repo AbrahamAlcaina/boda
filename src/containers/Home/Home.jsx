@@ -1,8 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import { Machines, Nav } from '../../components/organisms';
 import { connect } from 'react-redux';
-import { LinearProgress } from 'material-ui';
-import { FormattedMessage } from 'react-intl';
+import { Nav } from 'components/organisms';
 import connectData from 'helpers/connectData';
 import * as homeActions from 'redux/modules/home';
 
@@ -15,29 +13,11 @@ class Home extends Component {
 
   render() {
     const styles = require('./Home.scss');
-    let page;
-    if (this.props.home.loaded) {
-      const machines = this.props.home.machines;
-      page = (<Machines machines={machines} />);
-    } else {
-      page = (
-        <h2>
-          <LinearProgress mode="indeterminate" />
-          <FormattedMessage
-            id="home.loading"
-            description="home loading"
-            defaultMessage="loading..."
-          />
-        </h2>
-      );
-    }
-
     return (
       <div className={styles.home}>
         <Nav />
         <div className={styles.masthead}>
           <div className="container">
-            {page}
           </div>
         </div>
       </div>

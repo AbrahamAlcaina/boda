@@ -1,20 +1,17 @@
 import React, { PropTypes } from 'react';
 import { AppBar, Avatar } from 'material-ui';
-import { NavMenu } from '../molecules';
+import { Colors } from 'material-ui/lib/styles';
 import { Link } from 'react-router';
 const logoImage = require('./icon.png');
 
 const nav = ({}) => {
   return (
     <AppBar
-      title = "My casino"
+      title = "Nicole i Abraham"
       iconElementLeft = {
-        <Link to="/home">
-          <Avatar src={logoImage} />
+        <Link to="/">
+          <Avatar src={logoImage} color={Colors.grey50} />
         </Link>
-      }
-      iconElementRight = {
-        <NavMenu />
       }
     />
   );

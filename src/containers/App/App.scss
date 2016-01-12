@@ -1,5 +1,16 @@
 .app {
-  background: linear-gradient(90deg, #7474BF 10%, #348AC7 90%);
+  background: url('./bg.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  content: '';
+  will-change: transform;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  position: fixed;
+
   .brand {
     position: absolute;
     $size: 40px;
@@ -18,4 +29,5 @@
   }
 }
 .appContent {
+
 }

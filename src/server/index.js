@@ -18,7 +18,7 @@ import qs from 'query-string';
 import getRoutes from '../routes';
 import getStatusFromRoutes from '../helpers/getStatusFromRoutes';
 import { loadCss } from '../utils/loadcss';
-import { getCurrentLocale, translations } from './utils/intl';
+import { getCurrentLocale, translations } from '../utils/intl';
 import { IntlProvider } from 'react-intl';
 import './intl-polyfill';
 
@@ -29,7 +29,7 @@ app.set('port', config.port || 1337);
 const server = new http.Server(app);
 
 app.use(compression());
-app.use(favicon(path.join(__dirname, '..', 'static', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, '../..', 'static', 'favicon.ico')));
 app.use(require('serve-static')(path.join(__dirname, '..', 'static')));
 
 app.use(/^((?!(api|auth)).)*$/, (req, res) => {
