@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import DocumentMeta from 'react-document-meta';
 import { pushState } from 'redux-router';
 import { app } from 'config';
-
 import * as auth from 'redux/modules/auth';
+require('./bg.jpg');
 
 class App extends Component {
   static propTypes = {
