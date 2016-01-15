@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 import { Nav } from 'components/organisms';
 import connectData from 'helpers/connectData';
@@ -15,6 +16,7 @@ class Home extends Component {
     const styles = require('./Home.scss');
     return (
       <div className={styles.home}>
+      <Helmet title="Home"/>
         <Nav />
         <div className={styles.masthead}>
           <div className="container">

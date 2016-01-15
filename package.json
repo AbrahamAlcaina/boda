@@ -38,8 +38,7 @@
   "betterScripts": {
     "coverage:node": {
       "command": "./node_modules/.bin/isparta cover --report text --report html _mocha -- ./api/**/*.spec.js --compilers js:babel-register --require  ./test_helper.js",
-      "env": {
-      }
+      "env": {}
     },
     "coverage:karma": {
       "command": "karma start ",
@@ -49,8 +48,7 @@
     },
     "test:node": {
       "command": "node ./node_modules/mocha/bin/mocha ./api/**/*.spec.js --compilers js:babel-register --require ./test_helper.js",
-      "env": {
-      }
+      "env": {}
     },
     "test:karma": {
       "command": "karma start",
@@ -64,8 +62,7 @@
     },
     "tdd-node": {
       "command": "node ./node_modules/mocha/bin/mocha ./api/**/*.spec.js --compilers js:babel-register --require ./test_helper.js --watch",
-      "env": {
-      }
+      "env": {}
     },
     "test": {
       "command": "npm run test-karma && npm run test-node",
@@ -177,10 +174,10 @@
     "query-string": "^3.0.0",
     "react": "^0.14.6",
     "react-a11y": "^0.2.8",
-    "react-addons-test-utils": "^0.14.6",
-    "react-document-meta": "^2.0.1",
+    "react-addons-test-utils": "^0.14.6",    
     "react-dom": "^0.14.6",
     "react-global": "^0.1.8",
+    "react-helmet": "^2.3.1",
     "react-inline-css": "^2.1.0",
     "react-intl": "^2.0.0-beta-1",
     "react-redux": "^4.0.6",

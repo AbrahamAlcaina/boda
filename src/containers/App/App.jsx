@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import DocumentMeta from 'react-document-meta';
+import Helmet from 'react-helmet';
 import { pushState } from 'redux-router';
 import { app } from 'config';
 import * as auth from 'redux/modules/auth';
@@ -28,7 +28,7 @@ class App extends Component {
     const styles = require('./App.scss');
     return (
       <div className={styles.app}>
-        <DocumentMeta app={app}/>
+        <Helmet {...app.head}/>
         <div className={styles.appContent}>
           {this.props.children}
         </div>

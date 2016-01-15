@@ -1,7 +1,7 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom/server';
 import serialize from 'serialize-javascript';
-import DocumentMeta from 'react-document-meta';
+import Helmet from 'react-helmet';
 
 /**
  * Wrapper component containing HTML metadata and boilerplate tags.
@@ -24,16 +24,17 @@ class Html extends Component {
   };
 
   render() {
-    const {locale, localeData, localeMessages, assets, component, store, css} = this.props;
+    const { locale, localeData, localeMessages, assets, component, store, css } = this.props;
     const content = component ? ReactDOM.renderToString(component) : '';
     const style = {
       height: '100%'
-    }
+    };
+    const head = Helmet.rewind();
     const data = {
       store: store.getState(),
-      locale: locale,
-      localeData: localeData,
-      localeMessages: localeMessages
+      locale,
+      localeData,
+      localeMessages
     };
     /* styles (will be present only in production with webpack extract text plugin)
     {Object.keys(assets.styles).map((style, key) =>
@@ -48,21 +49,32 @@ class Html extends Component {
           <link rel="dns-prefetch" href={process.env.API_URL} />
           <link rel="dns-prefetch" href="//fonts.googleapis.com/css" />
           <link rel="shortcut icon" href="/favicon.ico" />
-          {DocumentMeta.renderAsReact()}
+          { head && head.base.toComponent() }
+          { head && head.title.toComponent() }
+          { head && head.meta.toComponent() }
+          { head && head.link.toComponent() }
+          { head && head.script.toComponent() }
           <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-          <link href="//fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css" />
-          {css.map( item => <style dangerouslySetInnerHTML={{__html: item.toString()}} />)}
-
-          {/* (will be present only in development mode) */}
-          {/* outputs a <style/> tag with all bootstrap styles + App.scss + it could be CurrentPage.scss. */}
-          {/* can smoothen the initial style flash (flicker) on page load in development mode. */}
-          {/* ideally one could also include here the style for the current page (Home.scss, About.scss, etc) */}
-          { Object.keys(assets.styles).length === 0 ? <style dangerouslySetInnerHTML={{__html: require('bootstrap-loader/no-op') + require('../containers/App/App.scss')._style}}/> : null }
+          <link
+            href="//fonts.googleapis.com/css?family=Roboto:400,300,500,700"
+            rel="stylesheet"
+            type="text/css"
+          />
+          {css.map(item => <style dangerouslySetInnerHTML={{ __html: item.toString() }} />)}
+          {Object.keys(assets.styles).length === 0 ?
+            <style
+              dangerouslySetInnerHTML=
+              {{ __html: require('bootstrap-loader/no-op') + require('../containers/App/App.scss')._style }}
+            />
+             : null }
         </head>
         <body>
-          <div id="content" dangerouslySetInnerHTML={{__html: content}}/>
-          <script dangerouslySetInnerHTML={{__html: `window.__data=${serialize(data)};`}} charSet="UTF-8"/>
+          <div id="content" dangerouslySetInnerHTML={{ __html: content }}/>
+          <script
+            dangerouslySetInnerHTML={{ __html: `window.__data=${serialize(data)};` }}
+            charSet="UTF-8"
+          />
           <script src={assets.javascript.main} charSet="UTF-8"/>
         </body>
       </html>
