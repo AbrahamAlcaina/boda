@@ -19,6 +19,7 @@ module.exports = Object.assign({
     meta: {
       charSet: 'utf-8',
       property: {
+        'theme-color': '#e0f7fa',
         'og:site_name': 'Nicole i Abraham',
         'og:image': 'https://nicoleiabraham/logo.jpg',
         'og:locale': 'es_CA',
