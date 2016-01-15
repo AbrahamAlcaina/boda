@@ -30,7 +30,7 @@ const server = new http.Server(app);
 
 app.use(compression());
 app.use(favicon(path.join(__dirname, '../..', 'static', 'favicon.ico')));
-app.use(require('serve-static')(path.join(__dirname, '..', 'static')));
+app.use(require('serve-static')(path.join(__dirname, '../..', 'static')));
 
 app.use(/^((?!(api|auth)).)*$/, (req, res) => {
   if (!css) {
