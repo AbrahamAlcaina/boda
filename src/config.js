@@ -17,10 +17,10 @@ module.exports = Object.assign({
     title: 'Nicole & Abraham weeding',
     description: 'Aquí encontrarás toda la información relacionada con nuestra boda.',
     head: {
-      titleTemplate: 'Nicole i Abraham: %s',      
+      titleTemplate: 'Nicole i Abraham: %s',
       meta: [
         {name: 'description', content: 'Nicole i Abraham'},
-        {name: 'theme-color', content: '#e0f7fa'},
+        {name: 'theme-color', content: '#00bcd4'},
         {charset: 'utf-8'},
         {property: 'og:site_name', content: 'Nicole i Abraham'},
         {property: 'og:image', content: 'https://nicoleiabraham/logo.jpg'},
