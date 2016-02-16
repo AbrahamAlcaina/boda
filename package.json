@@ -37,6 +37,7 @@
     "express": "^4.13.4",
     "glob": "^7.0.0",
     "history": "^2.0.0-rc2",
+    "immutable": "^3.7.6",
     "intl": "^1.1.0",
     "intl-locales-supported": "^1.0.0",
     "isomorphic-fetch": "^2.2.1",
@@ -50,7 +51,10 @@
     "react-router": "^2.0.0-rc5",
     "react-tap-event-plugin": "^0.2.2",
     "redux": "^3.0.5",
-    "redux-thunk": "^1.0.3"
+    "redux-actions": "^0.9.1",
+    "redux-promise-middleware": "^2.3.3",
+    "remote-redux-devtools": "^0.1.2",
+    "reselect": "^2.0.3"
   },
   "devDependencies": {
     "babel-eslint": "^4.1.8",
