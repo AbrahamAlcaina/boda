@@ -52,6 +52,7 @@
     "react-tap-event-plugin": "^0.2.2",
     "redux": "^3.0.5",
     "redux-actions": "^0.9.1",
+    "redux-immutable": "^3.0.3",
     "redux-promise-middleware": "^2.3.3",
     "remote-redux-devtools": "^0.1.2",
     "reselect": "^2.0.3"

@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux-immutable';
 import contact from './contact';
-import guest from './guest';
+import guests from './guests';
 import history from './history';
-import intializeState from './intializeState';
+import initializeState from './initializeState';
 import landing from './landing';
 import place from './place';
 import schedule from './schedule';
@@ -11,9 +11,9 @@ import weeding from './wedding';
 
 const rootReducer = combineReducers({
   contact,
-  guest,
+  guests,
   history,
-  intializeState,
+  initializeState,
   landing,
   place,
   schedule,

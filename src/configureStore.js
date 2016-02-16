@@ -2,7 +2,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import promiseMiddleware from 'redux-promise-middleware';
 import { Map } from 'immutable';
 import rootReducer from './reducers';
-import { initialize } from './reducers/intializeState';
+import { initialize } from './reducers/initializeState';
 import devTools from 'remote-redux-devtools';
 
 const middlewares = [promiseMiddleware({
