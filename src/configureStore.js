@@ -10,12 +10,12 @@ const middlewares = [promiseMiddleware({
 })];
 let createStoreWithMiddleware = applyMiddleware(...middlewares)(createStore);
 
-export default function configureStore() {
+export default function configureStore(initialState) {
   if (process.env.NODE_ENV === 'development') {
     createStoreWithMiddleware = compose(applyMiddleware(...middlewares), devTools())(createStore);
   }
-  const initialState = rootReducer(Map({}), initialize);
-  const store = createStoreWithMiddleware(rootReducer, initialState);
+  const state = initialState || rootReducer(Map({}), initialize);
+  const store = createStoreWithMiddleware(rootReducer, state);
 
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers

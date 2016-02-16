@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import styles from './root.style';
-console.log(styles.body);
+
 class Root extends Component {
 
   static propTypes = {
