@@ -10,6 +10,15 @@ import configureStore from './configureStore';
 import { getCurrentLocale, translations } from './utils/intl';
 import { IntlProvider } from 'react-intl';
 
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
+// Needed for onTouchTap
+// Can go away when react 1.0 release
+// Check this repo:
+// https://github.com/zilverline/react-tap-event-plugin
+injectTapEventPlugin();
+
+
 const isClient = typeof document !== 'undefined';
 
 if (isClient) {

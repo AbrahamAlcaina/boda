@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import promiseMiddleware from 'redux-promise-middleware';
-import { Map } from 'immutable';
+import { Map, fromJS } from 'immutable';
 import rootReducer from './reducers';
 import { initialize } from './reducers/initializeState';
 import devTools from 'remote-redux-devtools';
@@ -14,7 +14,7 @@ export default function configureStore(initialState) {
   if (process.env.NODE_ENV === 'development') {
     createStoreWithMiddleware = compose(applyMiddleware(...middlewares), devTools())(createStore);
   }
-  const state = initialState || rootReducer(Map({}), initialize);
+  const state = initialState && fromJS(initialState) || rootReducer(Map({}), initialize);
   const store = createStoreWithMiddleware(rootReducer, state);
 
   if (module.hot) {
