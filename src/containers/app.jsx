@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import Helmet from 'react-helmet';
 import AppBar from 'material-ui/lib/app-bar';
 import { FormattedMessage } from 'react-intl';
+import { Nav } from '../components/organism';
 
 class App extends Component {
   static propTypes = {
@@ -28,6 +29,7 @@ class App extends Component {
                 iconClassNameRight="muidocs-icon-navigation-expand-more"
               />
               {this.props.children}
+              <Nav />
           </div>
       );
   }
