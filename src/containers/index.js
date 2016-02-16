@@ -1,9 +1,4 @@
-import App from './App/App';
-import Home from './Home/Home';
-import NotFound from './NotFound/NotFound';
-
-export default {
-  App,
-  Home,
-  NotFound
-};
+export App from './app';
+export Home from './home';
+export NoMatch from './noMatch';
+export Root from './root';
