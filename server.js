@@ -51,7 +51,7 @@ if (!process.env.NODE_ENV) {
 
 server.get('*', require('./src').serverMiddleware);
 
-server.listen(server.get('port'), 'localhost', (err) => {
+server.listen(server.get('port'), (err) => {
   if (err) {
     console.error(err);
   }
