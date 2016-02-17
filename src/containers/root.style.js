@@ -1,8 +1,11 @@
 export default {
+  html: {
+    fontFamily: ['Roboto', 'sans-serif'],
+    WebkitFontSmoothing: 'antialiased'
+  },
   body: {
-    margin: 0,
     fontSize: 15,
     lineHeight: 24,
-    flex: 1
+    padding: 0
   },
 };

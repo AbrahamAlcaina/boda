@@ -17,7 +17,10 @@ export default class LeftNavBar extends React.Component {
   handleToggle = () => this.setState({ open: !this.state.open });
   handleClose = () => this.setState({ open: false });
   handleRequestChange = open => this.setState({ open });
-  handleNavigate = path => browserHistory.push(path);
+  handleNavigate = path => {
+    this.handleClose();
+    browserHistory.push(path);
+  };
 
   render() {
     return (

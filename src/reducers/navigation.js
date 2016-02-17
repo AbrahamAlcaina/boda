@@ -24,6 +24,10 @@ export const loadNavigationOptions = createAction(LOAD_NAVIGATION, () => ({
   promise: new Promise(resolve => {
     const navigation = [
       {
+        path: '/',
+        name: 'home'
+      },
+      {
         path: '/contact',
         name: 'contact'
       },

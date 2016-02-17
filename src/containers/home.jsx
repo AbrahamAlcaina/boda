@@ -1,22 +1,32 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
+import { createSelector } from 'reselect';
+import { Card } from '../components/molecules';
 
 class Home extends Component {
-    render() {
-      return (
-          <div>
-              <Helmet title="Home" />
-              <h5>Main:</h5>
-          </div>
-      );
-    }
-}
-
-function mapStateToProps(state) {
-  return {
-    users: state.users
+  static displayName = 'Home';
+  static propTypes = {
+    navigation: PropTypes.array.isRequired
   };
-}
 
-export default connect(mapStateToProps)(Home);
+  render() {
+    const { navigation = [] } = this.props;
+    return (
+        <div>
+            <Helmet title="Home" />
+            { navigation.map(item => (
+              <Card name={item.get('name')} key={item.get('name')}/>
+            ))}
+        </div>
+    );
+  }
+}
+const selector = createSelector(
+  [state => state.get('navigation')],
+  state => ({ navigation: state.get('navigation') })
+);
+
+const actions = Object.assign({}, {});
+
+export default connect(selector, actions)(Home);

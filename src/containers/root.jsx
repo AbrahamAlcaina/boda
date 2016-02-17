@@ -52,7 +52,7 @@ class Root extends Component {
   render() {
     const head = this.props.head;
     return (
-      <html>
+      <html style={styles.html}>
         <head>
           <link
             href="//fonts.googleapis.com/css?family=Roboto:400,300,500,700"
