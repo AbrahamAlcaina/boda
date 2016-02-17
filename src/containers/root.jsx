@@ -62,6 +62,7 @@ class Root extends Component {
           {head.title.toComponent()}
           {head.meta.toComponent()}
           {head.link.toComponent()}
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
         </head>
         <body style={styles.body}>
             <div id="root" dangerouslySetInnerHTML={{ __html: this.props.content }} />
