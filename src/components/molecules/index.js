@@ -1,1 +1,1 @@
-export LeftNavBar from './LeftNavBar';
+export LeftNavBar from './leftNavBar';
