@@ -74,7 +74,8 @@
     "redux-promise-middleware": "^2.3.3",
     "remote-redux-devtools": "^0.1.2",
     "reselect": "^2.0.3",
-    "webpack": "^1.12.11"
+    "webpack": "^1.12.11",
+    "webpack-dev-middleware": "^1.5.1"
   },
   "devDependencies": {
     "babel-eslint": "^4.1.8",
@@ -88,8 +89,7 @@
     "nodemon": "^1.8.1",
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.1",
-    "redbox-react": "^1.2.2",    
-    "webpack-dev-middleware": "^1.5.1",
+    "redbox-react": "^1.2.2",
     "webpack-hot-middleware": "^2.6.0"
   }
 }
