@@ -9,6 +9,7 @@ const config = require('./webpack.config.js');
 
 const port = process.env.PORT || 3000;
 const server = express();
+server.set('port', port);
 global.__ENVIRONMENT__ = process.env.NODE_ENV || 'default';
 
 // Otherwise errors thrown in Promise routines will be silently swallowed.
@@ -50,7 +51,7 @@ if (!process.env.NODE_ENV) {
 
 server.get('*', require('./src').serverMiddleware);
 
-server.listen(port, 'localhost', (err) => {
+server.listen(server.get('port'), 'localhost', (err) => {
   if (err) {
     console.error(err);
   }
