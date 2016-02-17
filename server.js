@@ -30,7 +30,7 @@ server.get('/favicon.ico', (req, res) => {
   res.end();
 });
 
-server.use(express.static(path.resolve(__dirname, 'dist')));
+server.use(express.static(path.resolve(__dirname, 'static')));
 
 if (!process.env.NODE_ENV) {
   const compiler = webpack(config);

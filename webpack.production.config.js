@@ -17,7 +17,7 @@ class CleanPlugin {
 module.exports = {
     entry: './src/index',
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.join(__dirname, 'static/dist'),
         filename: 'app.min.js'
     },
     plugins: [

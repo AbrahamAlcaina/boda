@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import { Nav } from '../components/organism';
 import { createSelector } from 'reselect';
 import { connect } from 'react-redux';
+import style from './app.style';
 import * as navigationActions from '../reducers/navigation';
 
 class App extends Component {
@@ -32,7 +33,9 @@ class App extends Component {
                 ]}
               />
             <Nav navigation={navigation}/>
+            <div style={style.content}>
                 {this.props.children}
+            </div>
           </div>
       );
   }

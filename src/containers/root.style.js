@@ -1,11 +1,16 @@
 export default {
   html: {
     fontFamily: ['Roboto', 'sans-serif'],
-    WebkitFontSmoothing: 'antialiased'
+    WebkitFontSmoothing: 'antialiased',
+    background: 'url(img/bg.jpg) no-repeat center center fixed',
+    WebkitBackgroundSize: 'cover',
+    MozBackgroundSize: 'cover',
+    OBackgroundSize: 'cover',
+    backgroundSize: 'cover'
   },
   body: {
     fontSize: 15,
     lineHeight: 24,
-    padding: 0
-  },
+    margin: 0
+  }
 };
