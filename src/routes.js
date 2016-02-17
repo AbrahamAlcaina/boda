@@ -5,6 +5,7 @@ import * as containers from './containers';
 export default (
     <Route path="/" component={containers.App}>
         <IndexRoute component={containers.Home} />
+        <Route path="/contact" component= {containers.Contact} />
         <Route path="*" component={containers.NoMatch} />
     </Route>
 );

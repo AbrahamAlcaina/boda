@@ -4,6 +4,7 @@ import guests from './guests';
 import history from './history';
 import initializeState from './initializeState';
 import landing from './landing';
+import navigation from './navigation';
 import place from './place';
 import schedule from './schedule';
 import stagparty from './stagparty';
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   history,
   initializeState,
   landing,
+  navigation,
   place,
   schedule,
   stagparty,
