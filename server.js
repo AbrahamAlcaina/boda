@@ -1,5 +1,5 @@
 require('babel-core/register');
-
+const compression = require('compression');
 const path = require('path');
 const express = require('express');
 const webpack = require('webpack');
@@ -21,6 +21,7 @@ process.on('unhandledRejection', (reason, p) => {
   }
 });
 
+server.use(compression());
 // Short-circuit the browser's annoying favicon request. You can still
 // specify one as long as it doesn't have this exact name and path.
 server.get('/favicon.ico', (req, res) => {
