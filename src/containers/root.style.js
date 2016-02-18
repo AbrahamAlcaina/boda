@@ -7,11 +7,14 @@ export default {
     MozBackgroundSize: 'cover',
     OBackgroundSize: 'cover',
     backgroundSize: 'cover',
-    backgroundPosition: 'center'
+    backgroundPosition: 'center',
+    height: '100%',
+    minHeight: '100%'
   },
   body: {
     fontSize: 15,
     lineHeight: 24,
-    margin: 0
+    margin: 0,
+    minHeight: '100%'
   }
 };
