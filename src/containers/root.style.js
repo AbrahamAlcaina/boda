@@ -6,7 +6,8 @@ export default {
     WebkitBackgroundSize: 'cover',
     MozBackgroundSize: 'cover',
     OBackgroundSize: 'cover',
-    backgroundSize: 'cover'
+    backgroundSize: 'cover',
+    backgroundPosition: 'center'
   },
   body: {
     fontSize: 15,
