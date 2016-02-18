@@ -6,7 +6,6 @@ import { createSelector } from 'reselect';
 class Home extends Component {
   static displayName = 'Home';
   static propTypes = {
-    navigation: PropTypes.array
   };
 
   render() {

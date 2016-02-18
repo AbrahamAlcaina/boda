@@ -13,7 +13,6 @@ export default {
   },
   body: {
     fontSize: 15,
-    lineHeight: 24,
     margin: 0,
     minHeight: '100%'
   }

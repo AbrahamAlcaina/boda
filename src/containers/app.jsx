@@ -12,7 +12,7 @@ class App extends Component {
 
   static propTypes = {
     children: PropTypes.any,
-    navigation: PropTypes.array,
+    navigation: PropTypes.any,
     loadNavigationOptions: PropTypes.func.isRequired
   };
 

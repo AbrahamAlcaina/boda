@@ -1,12 +1,11 @@
 import React, { PropTypes } from 'react';
 import LeftNav from 'material-ui/lib/left-nav';
 import MenuItem from 'material-ui/lib/menus/menu-item';
-import { browserHistory } from 'react-router'
-
+import { browserHistory } from 'react-router';
 
 export default class LeftNavBar extends React.Component {
   static propTypes = {
-    navigation: PropTypes.array.isRequire
+    navigation: PropTypes.any.isRequired
   };
 
   constructor(props) {
