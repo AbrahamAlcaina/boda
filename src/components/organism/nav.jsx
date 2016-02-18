@@ -22,6 +22,9 @@ export default class Nav extends React.Component {
             defaultMessage="titulillo"
           />
         }
+        style={{
+          position: 'fixed'
+        }}
         iconElementLeft={
           <img src="/img/rings.png" height={48} width={48} />
         }

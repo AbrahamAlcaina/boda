@@ -71,6 +71,7 @@
     "locale": "0.0.20",
     "material-ui": "^0.14.4",
     "nodemon": "^1.8.1",
+    "radium": "^0.16.6",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
     "react-helmet": "^2.3.1",

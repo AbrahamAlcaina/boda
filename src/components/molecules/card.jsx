@@ -8,7 +8,12 @@ import FlatButton from 'material-ui/lib/flat-button';
 import CardText from 'material-ui/lib/card/card-text';
 
 const CardExampleWithAvatar = ({ name }) => (
-  <Card>
+  <Card
+    style={{
+      marginTop: 10,
+      marginBottom: 10
+    }}
+  >
     <CardHeader
       title="URL Avatar"
       subtitle="Subtitle"

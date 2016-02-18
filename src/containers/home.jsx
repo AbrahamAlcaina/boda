@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
+import { Card } from '../components/molecules'
 
 class Home extends Component {
   static displayName = 'Home';
@@ -12,6 +13,9 @@ class Home extends Component {
     return (
         <div>
             <Helmet title="Home" />
+            <Card />
+            <Card />
+            <Card />
         </div>
     );
   }
