@@ -92,6 +92,7 @@ class Root extends Component {
           {head.link.toComponent()}
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="mobile-web-app-capable" content="yes" />
           <script dangerouslySetInnerHTML={{ __html: scrollFunction }}></script>
         </head>
         <body style={styles.body}>
