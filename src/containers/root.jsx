@@ -100,7 +100,7 @@ class Root extends Component {
             {this.renderInitialState()}
             {this.renderLocale()}
             {head.script.toComponent()}
-            <script src={!process.env.NODE_ENV ? '/app.js' : '/app.min.js'}></script>
+            <script src={!process.env.NODE_ENV ? '/app.js' : '/dist/app.min.js'}></script>
         </body>
       </html>
     );
