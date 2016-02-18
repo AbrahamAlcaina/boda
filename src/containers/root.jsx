@@ -51,6 +51,17 @@ class Root extends Component {
 
   render() {
     const head = this.props.head;
+    const scrollFunction = `
+    window.addEventListener("load",function() {
+      setTimeout(function(){
+        window.scrollTo(0, 1);
+      }, 1);
+      setTimeout(function(){
+        window.scrollTo(0, 1);
+      }, 0
+     );
+    });
+    `;
     return (
       <html style={styles.html}>
         <head>
@@ -63,6 +74,8 @@ class Root extends Component {
           {head.meta.toComponent()}
           {head.link.toComponent()}
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <script dangerouslySetInnerHTML={{ __html: scrollFunction }} />
         </head>
         <body style={styles.body}>
             <div id="root" dangerouslySetInnerHTML={{ __html: this.props.content }} />
