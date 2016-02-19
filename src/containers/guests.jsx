@@ -5,21 +5,21 @@ import { connect } from 'react-redux';
 import style from './app.style';
 import * as navigationActions from '../reducers/navigation';
 
-class Contact extends Component {
+class Guests extends Component {
     render() {
       return (
           <div>
-              <Helmet title="contact" />
+              <Helmet title="guests" />
           </div>
       );
     }
 }
 
 const selector = createSelector(
-  [state => state.get('contact')],
-  state => ({ contact: state.get('contact') })
+  [state => state.get('guests')],
+  state => ({ guests: state.get('guests') })
 );
 
 const actions = Object.assign({}, navigationActions);
 
-export default connect(selector, actions)(Contact);
+export default connect(selector, actions)(Guests);
