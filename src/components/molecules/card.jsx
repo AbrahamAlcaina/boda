@@ -6,13 +6,11 @@ import CardMedia from 'material-ui/lib/card/card-media';
 import CardTitle from 'material-ui/lib/card/card-title';
 import FlatButton from 'material-ui/lib/flat-button';
 import CardText from 'material-ui/lib/card/card-text';
+import style from './card.style';
 
 const CardExampleWithAvatar = ({ name }) => (
   <Card
-    style={{
-      marginTop: 10,
-      marginBottom: 10
-    }}
+    style={style.container}
   >
     <CardHeader
       title="URL Avatar"

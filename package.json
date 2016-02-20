@@ -46,6 +46,7 @@
     }
   },
   "dependencies": {
+    "autoresponsive-react": "^1.1.10",
     "babel-core": "^6.4.5",
     "babel-eslint": "^4.1.8",
     "babel-loader": "^6.2.1",
@@ -71,13 +72,13 @@
     "locale": "0.0.20",
     "material-ui": "^0.14.4",
     "nodemon": "^1.8.1",
-    "radium": "^0.16.6",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
     "react-helmet": "^2.3.1",
     "react-intl": "^2.0.0-beta-2",
     "react-redux": "^4.0.6",
     "react-router": "^2.0.0-rc5",
+    "react-style": "^0.5.5",
     "react-tap-event-plugin": "^0.2.2",
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.1",

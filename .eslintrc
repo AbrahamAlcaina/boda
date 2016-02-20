@@ -32,7 +32,7 @@
     "no-console": 0,
     "no-alert": 0,
     "new-cap": [ 2, {
-        "capIsNewExceptions": ["List", "Map", "OrderedSet", "Range"]
+        "capIsNewExceptions": ["List", "Map", "OrderedSet", "Range", "Radium"]
     }]
   },
   "plugins": [
