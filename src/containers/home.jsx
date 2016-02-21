@@ -2,8 +2,18 @@ import React, { Component, PropTypes } from 'react';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
-import { Card } from '../components/molecules';
 import AutoResponsive from 'autoresponsive-react';
+
+
+import Card from 'material-ui/lib/card/card';
+import CardActions from 'material-ui/lib/card/card-actions';
+import CardHeader from 'material-ui/lib/card/card-header';
+import CardMedia from 'material-ui/lib/card/card-media';
+import CardTitle from 'material-ui/lib/card/card-title';
+import FlatButton from 'material-ui/lib/flat-button';
+import CardText from 'material-ui/lib/card/card-text';
+
+
 
 class Home extends Component {
   static displayName = 'Home';
@@ -39,43 +49,21 @@ class Home extends Component {
       <div>
         <Helmet title="Home"/>
           <AutoResponsive ref="container" {...this.getAutoResponsiveProps()} >
-              <div className="item" itemClassName="item" style={{ width: 360, height: 540 }} >
-                <Card />
+              <div className="item" itemClassName="item" style={{ width: 900, height: 540 }} >
+                <Card style={{
+                    width: '100%'
+                  }}>
+                  <CardHeader
+                    title="Ens casem!"
+                    subtitle="28 de maig de 2016"
+                  />
+                <CardMedia>
+                  <img src="/img/pont.jpg" />
+                </CardMedia>
+              </Card>
               </div>
-
-              <div className="item" itemClassName="item" style={{ width: 360, height: 540 }} >
-                <Card />
-              </div>
-
-              <div className="item" itemClassName="item" style={{ width: 360, height: 540 }} >
-                <Card />
-              </div>
-
-              <div className="item" itemClassName="item" style={{ width: 360, height: 540 }} >
-                <Card />
-              </div>
-              <div className="item" itemClassName="item" style={{ width: 360, height: 540 }} >
-                <Card />
-              </div>
-              <div className="item" itemClassName="item" style={{ width: 360, height: 540 }} >
-                <Card />
-              </div>
-              <div className="item" itemClassName="item" style={{ width: 360, height: 540 }} >
-                <Card />
-              </div>
-              <div className="item" itemClassName="item" style={{ width: 360, height: 540 }} >
-                <Card />
-              </div>
-              <div className="item" itemClassName="item" style={{ width: 360, height: 540 }} >
-                <Card />
-              </div>
-              <div className="item" itemClassName="item" style={{ width: 360, height: 540 }} >
-                <Card />
-              </div>
-
-                </AutoResponsive>
-      </div>
-        );
+          </AutoResponsive>
+      </div>);
   }
 }
 const selector = createSelector(
