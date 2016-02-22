@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
-import { WeddingCard, OurHistoryCard, GuestsCard, WeddingPlaceCard } from '../components/molecules';
+import { WeddingCard,
+  OurHistoryCard,
+  GuestsCard,
+  WeddingPlaceCard,
+  PlaceCard
+} from '../components/molecules';
 
 class Home extends Component {
   static displayName = 'Home';
@@ -56,6 +61,7 @@ class Home extends Component {
         <OurHistoryCard />
         <GuestsCard />
         <WeddingPlaceCard />
+        <PlaceCard />
       </div>);
   }
 }

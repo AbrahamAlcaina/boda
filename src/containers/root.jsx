@@ -96,6 +96,12 @@ class Root extends Component {
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="theme-color" content="#00bcd4" />
           <script dangerouslySetInnerHTML={{ __html: scrollFunction }}></script>
+
+          <meta property="og:site_name" content="Nicole i Abraham" />
+          <meta property="og:title" content="Nicole i Abraham" />
+          <meta property="og:description" content="Nos casamos!" />
+          <meta property="og:image" itemProp="image" content="img/pont.jpg" />
+          <meta property="og:type" content="website" />
         </head>
         <body style={styles.body}>
             <div id="root" dangerouslySetInnerHTML={{ __html: this.props.content }} />

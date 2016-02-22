@@ -1,11 +1,11 @@
 {
   "nav.title" : "Nicole & Abraham",
-  "home.wedding": "We married!",
+  "home.wedding": "We are getting married!",
   "home.ourHistory": "Our history",
   "home.ourHistorySubtile" : "All about us",
   "home.guests" : "Guests",
   "home.guestsSubtile" : "See the list",
   "home.weddingPlace": "Wedding",
-  "home.weddingPlaceSubtitle": "When, where, how"
-
+  "home.weddingPlaceSubtitle": "When, where, how",
+  "home.guests.confirm" : "confirm"
 }
