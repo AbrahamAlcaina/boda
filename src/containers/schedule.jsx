@@ -5,21 +5,21 @@ import { connect } from 'react-redux';
 import style from './app.style';
 import * as navigationActions from '../reducers/navigation';
 
-class Contact extends Component {
+class Schedule extends Component {
     render() {
       return (
           <div>
-              <Helmet title="contact" />
+              <Helmet title="schedule" />
           </div>
       );
     }
 }
 
 const selector = createSelector(
-  [state => state.get('contact')],
-  state => ({ contact: state.get('contact') })
+  [state => state.get('schedule')],
+  state => ({ schedule: state.get('schedule') })
 );
 
 const actions = Object.assign({}, navigationActions);
 
-export default connect(selector, actions)(Contact);
+export default connect(selector, actions)(Schedule);

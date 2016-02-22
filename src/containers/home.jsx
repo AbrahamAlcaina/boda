@@ -2,14 +2,36 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
-import { Card } from '../components/molecules';
-import style from './home.style';
-import AutoResponsive from 'autoresponsive-react';
+import { WeddingCard, OurHistoryCard, GuestsCard, WeddingPlaceCard } from '../components/molecules';
 
 class Home extends Component {
   static displayName = 'Home';
   static propTypes = {
   };
+  constructor(props) {
+    super(props);
+    this.state = {
+      containerWidth: 1900
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', () => {
+      this.setState({
+        containerWidth: React.findDOMNode(this.refs.container).clientWidth
+      });
+    }, false);
+  }
+
+  getAutoResponsiveProps = () =>
+  ({
+    itemMargin: 10,
+    containerWidth: this.state.containerWidth,
+    itemClassName: 'item',
+    gridWidth: 100,
+    transitionDuration: '.5'
+  });
+
 
   getAutoResponsiveProps() {
     return {
@@ -23,19 +45,21 @@ class Home extends Component {
 
   render() {
     return (
-        <AutoResponsive style={style.container} {...this.getAutoResponsiveProps()}>
-            <Helmet title="Home" />
-            <Card className="item"/>
-            <Card className="item"/>
-            <Card className="item"/>
-            <Card className="item"/>
-            <Card className="item"/>
-            <Card className="item"/>
-            <Card className="item"/>
-        </AutoResponsive>
-    );
+      <div
+        className="row"
+        style={{
+          padding: 10
+        }}
+      >
+        <Helmet title="Home"/>
+        <WeddingCard />
+        <OurHistoryCard />
+        <GuestsCard />
+        <WeddingPlaceCard />
+      </div>);
   }
 }
+
 const selector = createSelector(
   [state => state.get('navigation')],
   state => ({ navigation: state.get('navigation') })

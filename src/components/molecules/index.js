@@ -1,3 +1,6 @@
 export LeftNavBar from './leftNavBar';
-export Card from './card';
+export WeddingCard from './weddingCard';
+export OurHistoryCard from './ourHistoryCard';
+export GuestsCard from './guestsCard';
 export ImageList from './imageList';
+export WeddingPlaceCard from './weddingPlaceCard';
