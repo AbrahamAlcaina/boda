@@ -97,10 +97,9 @@ class Root extends Component {
           <meta name="theme-color" content="#00bcd4" />
           <script dangerouslySetInnerHTML={{ __html: scrollFunction }}></script>
 
-          <meta property="og:site_name" content="Nicole i Abraham" />
           <meta property="og:title" content="Nicole i Abraham" />
-          <meta property="og:description" content="Nos casamos!" />
-          <meta property="og:image" itemProp="image" content="http://nicoleiabraham.com/img/meta.jpg" />
+          <meta property="og:description" content="Nos casamos" />
+          <meta property="og:image" content="http://nicoleiabraham.com/img/meta.jpg" />
           <meta property="og:url" content="http://nicoleiabraham.com" />
         </head>
         <body style={styles.body}>
