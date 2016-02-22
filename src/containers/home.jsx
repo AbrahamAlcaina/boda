@@ -53,7 +53,7 @@ class Home extends Component {
       <div
         className="row"
         style={{
-          padding: 10
+          marging: 10
         }}
       >
         <Helmet title="Home"/>
