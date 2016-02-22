@@ -82,6 +82,7 @@ class Root extends Component {
     return (
       <html style={styles.html}>
         <head>
+          <style dangerouslySetInnerHTML={{__html: this.props.css}} />
           <link
             href="//fonts.googleapis.com/css?family=Roboto:400,300,500,700"
             rel="stylesheet"

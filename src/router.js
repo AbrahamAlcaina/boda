@@ -9,7 +9,7 @@ import * as containers from './containers';
 import configureStore from './configureStore';
 import { getCurrentLocale, translations } from './utils/intl';
 import { IntlProvider } from 'react-intl';
-
+import css from './utils/loadCss';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 // Needed for onTouchTap
@@ -58,6 +58,7 @@ function renderComponentWithRoot(Component, componentProps, store, req) {
         head={head}
         locale={locale}
         localeMessages={localeMessages}
+        css={css}
       />
   );
   return `<!doctype html>
