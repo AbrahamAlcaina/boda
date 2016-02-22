@@ -56,7 +56,6 @@ class Home extends Component {
           marging: 10
         }}
       >
-        <Helmet title="Home"/>
         <WeddingCard />
         <OurHistoryCard />
         <GuestsCard />
