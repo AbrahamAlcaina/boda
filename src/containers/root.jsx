@@ -100,7 +100,7 @@ class Root extends Component {
           <meta property="og:site_name" content="Nicole i Abraham" />
           <meta property="og:title" content="Nicole i Abraham" />
           <meta property="og:description" content="Nos casamos!" />
-          <meta property="og:image" itemProp="image" content="http://nicoleiabraham.com/img/pont.jpg" />
+          <meta property="og:image" itemProp="image" content="http://nicoleiabraham.com/img/meta.jpg" />
           <meta property="og:type" content="website" />
         </head>
         <body style={styles.body}>
