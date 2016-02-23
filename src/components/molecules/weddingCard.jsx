@@ -23,7 +23,7 @@ class WeddingCard extends Component {
             default: 'other'
           })}
           subtitle={
-            formatTime(new Date(2016, 5, 28), {
+            formatTime(new Date(2016, 4, 28), {
               day: 'numeric',
               month: 'long',
               year: 'numeric'
