@@ -67,13 +67,13 @@ class Root extends Component {
     				if( doc.body ){
     					clearInterval( bodycheck );
     					scrollTop = getScrollTop();
-    					win.scrollTo( 0, scrollTop === 1 ? 0 : 1 );
+    					win.scrollTo( 0, scrollTop === 1 ? 0 : 10 );
     				}
     			}, 15 );
     		win.addEventListener( "load", function(){
     			setTimeout(function(){
     					//reset to hide addr bar at onload
-    					win.scrollTo( 0, scrollTop === 1 ? 0 : 1 );
+    					win.scrollTo( 0, scrollTop === 1 ? 0 : 10 );
     			}, 0);
     		} );
     	}
@@ -82,6 +82,12 @@ class Root extends Component {
     return (
       <html style={styles.html}>
         <head>
+          <meta property="og:title" content="Nicole i Abraham" />
+          <meta property="og:description" content="Nos casamos el 28 de mayo" />
+          <meta property="og:image" content="http://nicoleiabraham.com/img/meta.jpg" />
+          <meta property="og:url" content="http://nicoleiabraham.com/" />
+          <meta property="og:type" content="website" />
+
           <style dangerouslySetInnerHTML={{__html: this.props.css}} />
           <link
             href="//fonts.googleapis.com/css?family=Roboto:400,300,500,700"
@@ -89,7 +95,6 @@ class Root extends Component {
             type="text/css"
           />
           {head.title.toComponent()}
-          {head.meta.toComponent()}
           {head.link.toComponent()}
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -97,11 +102,6 @@ class Root extends Component {
           <meta name="theme-color" content="#00bcd4" />
           <script dangerouslySetInnerHTML={{ __html: scrollFunction }}></script>
 
-          <meta property="og:title" content="Nicole i Abraham" />
-          <meta property="og:description" content="Nos casamos el 28 de mayo" />
-          <meta property="og:image" content="http://nicoleiabraham.com/img/meta.jpg" />
-          <meta property="og:url" content="http://nicoleiabraham.com/" />
-          <meta property="og:type" content="website" />
         </head>
         <body style={styles.body}>
             <div id="root" dangerouslySetInnerHTML={{ __html: this.props.content }} />
