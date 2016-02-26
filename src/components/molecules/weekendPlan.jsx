@@ -3,11 +3,11 @@ import { injectIntl, intlShape } from 'react-intl';
 import Card from 'material-ui/lib/card/card';
 import CardHeader from 'material-ui/lib/card/card-header';
 import CardMedia from 'material-ui/lib/card/card-media';
-import Place from 'material-ui/lib/svg-icons/maps/place';
+import Weekend from 'material-ui/lib/svg-icons/content/weekend';
 import Colors from 'material-ui/lib/styles/colors';
 import style from './card.style';
 
-class PlaceCard extends Component {
+class WeekendPlan extends Component {
   static propTypes = {
     intl: intlShape.isRequired
   };
@@ -15,27 +15,28 @@ class PlaceCard extends Component {
   render() {
     const { formatMessage } = this.props.intl;
     return (
-      <div className="col-xs-12 col-sm-10 col-md-3 col-lg-4" style={style.container}>
+      <div className="col-xs-12 col-sm-12 col-md-3 col-lg-2" style={style.container}>
         <Card
           style={style.card}
         >
           <CardHeader
             title={formatMessage({
-              id: 'home.placePlace',
-              default: 'Allotjament'
+              id: 'home.WeekendPlan',
+              default: 'Pla del finde'
             })}
             subtitle={
               formatMessage({
-                id: 'home.placeSubtitle',
-                default: 'On durmim'
+                id: 'home.WeekendPlanSubtitle',
+                default: 'Com anirá la cosa'
               })
             }
           />
           <CardMedia>
-            <Place color={Colors.blue500} style={{
-              height: '100%',
-              with: '100%'
-            }}
+            <Weekend
+              style={{
+                height: '100%',
+                with: '100%'
+              }}
             />
           </CardMedia>
           </Card>
@@ -44,4 +45,4 @@ class PlaceCard extends Component {
   }
 }
 
-export default injectIntl(PlaceCard);
+export default injectIntl(WeekendPlan);

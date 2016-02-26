@@ -13,25 +13,26 @@ class OurHistoryCard extends Component {
   render() {
     const { formatMessage } = this.props.intl;
     return (
-      <Card
-        className="col-xs-12 col-sm-2 col-md-4 col-lg-4"
-        style={style.container}
-      >
+      <div className="col-xs-12 col-sm-2 col-md-3 col-lg-4" style={style.container}>
+        <Card
+          style={style.card}
+        >
           <CardMedia>
             <img src="/img/praga.jpg" />
           </CardMedia>
 
           <CardTitle title={formatMessage({
             id: 'home.ourHistory',
-            default: 'Our history'
+            default: 'La nostra história'
           })}
           subtitle={
             formatMessage({
               id: 'home.ourHistorySubtile',
-              default: 'All about us'
+              default: 'Una mica d\'história'
             })
           } />
         </Card>
+      </div>
       );
   }
 };

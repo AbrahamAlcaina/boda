@@ -6,61 +6,26 @@ import { WeddingCard,
   OurHistoryCard,
   GuestsCard,
   WeddingPlaceCard,
-  PlaceCard
+  PlaceCard,
+  WeekendPlan
 } from '../components/molecules';
 
 class Home extends Component {
   static displayName = 'Home';
   static propTypes = {
   };
-  constructor(props) {
-    super(props);
-    this.state = {
-      containerWidth: 1900
-    };
-  }
-
-  componentDidMount() {
-    window.addEventListener('resize', () => {
-      this.setState({
-        containerWidth: React.findDOMNode(this.refs.container).clientWidth
-      });
-    }, false);
-  }
-
-  getAutoResponsiveProps = () =>
-  ({
-    itemMargin: 10,
-    containerWidth: this.state.containerWidth,
-    itemClassName: 'item',
-    gridWidth: 100,
-    transitionDuration: '.5'
-  });
-
-
-  getAutoResponsiveProps() {
-    return {
-      itemMargin: 10,
-      containerWidth: this.state.containerWidth || document.body.clientWidth,
-      itemClassName: 'item',
-      gridWidth: 100,
-      transitionDuration: '.5'
-    };
-  }
 
   render() {
     return (
       <div
         className="row"
-        style={{
-          marging: 10
-        }}
       >
         <WeddingCard />
-        <OurHistoryCard />
+        <WeekendPlan />
         <GuestsCard />
         <WeddingPlaceCard />
         <PlaceCard />
+        <OurHistoryCard />
       </div>);
   }
 }

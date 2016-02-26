@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Helmet from 'react-helmet';
-import { Nav } from '../components/organism';
+import { Nav, Footer } from '../components/organism';
 import { createSelector } from 'reselect';
 import { connect } from 'react-redux';
 import style from './app.style';
@@ -36,6 +36,7 @@ class App extends Component {
             <div style={style.content}>
                 {this.props.children}
             </div>
+            <Footer />
           </div>
       );
   }

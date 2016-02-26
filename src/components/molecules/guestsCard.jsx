@@ -17,37 +17,36 @@ class GuestsCard extends Component {
   render() {
     const { formatMessage } = this.props.intl;
     return (
-      <Card
-        className="col-xs-12 col-sm-2 col-md-2 col-lg-2"
-        style={style.container}
-      >
-        <CardHeader
-          title={formatMessage({
-            id: 'home.guests',
-            default: 'Guests'
-          })}
-          subtitle={
-            formatMessage({
-              id: 'home.guestsSubtile',
-              default: 'All about us'
-            })
-          }
-        />
-        <CardMedia>
-          <AccountBox color={Colors.blue500} style={{
-            width: 300,
-            heigth: 300
-          }}
+      <div className="col-xs-12 col-sm-12 col-md-3 col-lg-2" style={style.container}>
+        <Card>
+          <CardHeader
+            title={formatMessage({
+              id: 'home.guests',
+              default: 'Convidats'
+            })}
+            subtitle={
+              formatMessage({
+                id: 'home.guestsSubtile',
+                default: 'Tot el que necesiteu saber'
+              })
+            }
           />
-        </CardMedia>
-        <CardActions>
-          <FlatButton primary label={formatMessage({
-            id: 'home.guests.confirm',
-            default: 'Confirm'
-          })}
-          />
-        </CardActions>
-      </Card>
+          <CardMedia>
+            <AccountBox color={Colors.blue500} style={{
+              height: '100%',
+              with: '100%'
+            }}
+            />
+          </CardMedia>
+          <CardActions>
+            <FlatButton primary label={formatMessage({
+              id: 'home.guests.confirm',
+              default: 'Confirmar assistencia'
+            })}
+            />
+          </CardActions>
+        </Card>
+      </div>
       );
   }
 }

@@ -13,10 +13,10 @@ class WeddingCard extends Component {
   render() {
     const { formatMessage, formatTime } = this.props.intl;
     return (
-      <Card
-        className="col-xs-12 col-sm-12 col-md-12 col-lg-10"
-        style={style.container}
-      >
+      <div className="col-xs-12 col-sm-12 col-md-9 col-lg-8" style={style.container}>
+        <Card
+          style={style.card}
+        >
         <CardHeader
           title={formatMessage({
             id: 'home.wedding',
@@ -34,6 +34,7 @@ class WeddingCard extends Component {
           <img src="/img/pont.jpg" />
         </CardMedia>
       </Card>
+    </div>
       );
   }
 }

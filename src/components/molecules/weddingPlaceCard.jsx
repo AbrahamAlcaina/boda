@@ -15,33 +15,34 @@ class WeddingPlaceCard extends Component {
   render() {
     const { formatMessage } = this.props.intl;
     return (
-      <Card
-        className="col-xs-12 col-sm-12 col-md-12 col-lg-12"
-        style={style.container}
-      >
-        <CardHeader
-          title={formatMessage({
-            id: 'home.weddingPlace',
-            default: 'other'
-          })}
-          subtitle={
-            formatMessage({
-              id: 'home.weddingPlaceSubtitle',
-              default: 'other'
-            })
-          }
-          avatar={
-            <Place color={Colors.blue500} style={{
-              width: 300,
-              heigth: 300
-            }}
-            />
-          }
-        />
-        <CardMedia>
-          <img src="img/garden.jpg" />
-        </CardMedia>
+      <div className="col-xs-12 col-sm-12 col-md-3 col-lg-4" style={style.container}>
+        <Card
+          style={style.card}
+        >
+          <CardHeader
+            title={formatMessage({
+              id: 'home.weddingPlace',
+              default: 'Celebració de la boda'
+            })}
+            subtitle={
+              formatMessage({
+                id: 'home.weddingPlaceSubtitle',
+                default: 'On es la gresca!'
+              })
+            }
+            avatar={
+              <Place color={Colors.blue500} style={{
+                width: 300,
+                heigth: 300
+              }}
+              />
+            }
+          />
+          <CardMedia>
+            <img src="img/garden.jpg" />
+          </CardMedia>
         </Card>
+      </div>
       );
   }
 }
