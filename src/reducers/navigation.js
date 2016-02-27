@@ -28,6 +28,10 @@ export const loadNavigationOptions = createAction(LOAD_NAVIGATION, () => ({
         name: 'home'
       },
       {
+        path: '/weekendPlan',
+        name: 'weekendPlan'
+      },
+      {
         path: '/contact',
         name: 'contact'
       },

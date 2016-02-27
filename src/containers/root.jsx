@@ -95,6 +95,11 @@ class Root extends Component {
             rel="stylesheet"
             type="text/css"
           />
+          <link
+            href="css/app.css"
+            rel="stylesheet"
+            type="text/css"
+          />
           {head.title.toComponent()}
           {head.link.toComponent()}
           <meta name="viewport" content="width=device-width, initial-scale=1" />

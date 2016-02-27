@@ -4,3 +4,4 @@ export Guests from './guests';
 export Home from './home';
 export NoMatch from './noMatch';
 export Root from './root';
+export WeekendPlan from './weekendPlan';
