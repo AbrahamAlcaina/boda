@@ -9,7 +9,6 @@ class WeddingCard extends Component {
   static propTypes = {
     intl: intlShape.isRequired
   };
-
   render() {
     const { formatMessage, formatTime } = this.props.intl;
     return (

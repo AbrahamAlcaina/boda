@@ -66,7 +66,7 @@ export const loadNavigationOptions = createAction(LOAD_NAVIGATION, () => ({
       {
         path: '/wedding',
         name: 'weeding',
-        title: 'boda'
+        title: 'nav.right.weeding'
       },
     ];
     // simutale load from server
