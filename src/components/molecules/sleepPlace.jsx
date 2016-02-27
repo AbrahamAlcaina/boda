@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { injectIntl, intlShape } from 'react-intl';
-import { browserHistory } from 'react-router';
-import Place from 'material-ui/lib/svg-icons/maps/place';
 import Colors from 'material-ui/lib/styles/colors';
 import Card from 'material-ui/lib/card/card';
 import CardHeader from 'material-ui/lib/card/card-header';
 import CardMedia from 'material-ui/lib/card/card-media';
+import Hotel from 'material-ui/lib/svg-icons/maps/hotel';
+import { browserHistory } from 'react-router';
 import style from './card.style';
 
-class WeddingPlaceCard extends Component {
+class SleepPlace extends Component {
   static propTypes = {
     intl: intlShape.isRequired
   };
@@ -25,30 +25,30 @@ class WeddingPlaceCard extends Component {
         >
           <CardHeader
             title={formatMessage({
-              id: 'home.weddingPlace',
-              default: 'Celebració de la boda'
+              id: 'home.sleepPlace',
+              default: 'Allotjament'
             })}
             subtitle={
               formatMessage({
-                id: 'home.weddingPlaceSubtitle',
-                default: 'On es la gresca!'
+                id: 'home.sleepPlaceSubtitle',
+                default: 'On durmim'
               })
             }
             style={style.cardHeader}
           />
           <CardMedia>
-            <Place
+            <Hotel
               style={{
-                width: 200,
-                height: 200
+                height: 200,
+                width: 200
               }}
               color={Colors.grey800}
             />
           </CardMedia>
-        </Card>
-      </div>
+          </Card>
+        </div>
       );
   }
 }
 
-export default injectIntl(WeddingPlaceCard);
+export default injectIntl(SleepPlace);

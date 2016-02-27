@@ -34,6 +34,7 @@ class OurHistoryCard extends Component {
                 default: 'Una mica d\'história'
               })
             }
+            style={style.cardHeader}
           />
           <CardMedia>
             <Heart

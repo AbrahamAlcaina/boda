@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { injectIntl, intlShape } from 'react-intl';
 import { browserHistory } from 'react-router';
 import Card from 'material-ui/lib/card/card';
+import Colors from 'material-ui/lib/styles/colors';
 import Coupple from 'material-ui/lib/svg-icons/action/schedule';
 import CardHeader from 'material-ui/lib/card/card-header';
 import CardMedia from 'material-ui/lib/card/card-media';
@@ -33,6 +34,7 @@ class WeekendPlan extends Component {
                 default: 'Com anirá la cosa'
               })
             }
+            style={style.cardHeader}
           />
           <CardMedia>
             <Coupple
@@ -40,6 +42,7 @@ class WeekendPlan extends Component {
                 height: 200,
                 width: 200
               }}
+              color={Colors.grey800}
             />
           </CardMedia>
           </Card>

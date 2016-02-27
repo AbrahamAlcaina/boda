@@ -19,7 +19,12 @@ export default {
   html: {
     fontFamily: ['Roboto', 'sans-serif'],
     WebkitFontSmoothing: 'antialiased',
-    background: 'linear-gradient(to left, #EFEFBB , #D4D3DD)',
+    background: 'url(img/bg.jpg) no-repeat center center fixed',
+    WebkitBackgroundSize: 'cover',
+    MozBackgroundSize: 'cover',
+    OBackgroundSize: 'cover',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
     height: '100%',
     minHeight: '100%'
   },

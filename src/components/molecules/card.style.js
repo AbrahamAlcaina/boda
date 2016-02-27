@@ -5,6 +5,8 @@ export default {
   cardBig: {
   },
   cardSmall: {
-    minHeight: 320
+  },
+  cardHeader: {
+    backgroundColor: '#e0e0e0',
   }
 };

@@ -7,7 +7,9 @@ import { WeddingCard,
   GuestsCard,
   WeddingPlaceCard,
   PlaceCard,
-  WeekendPlan
+  WeekendPlan,
+  WeedingList,
+  SleepPlace
 } from '../components/molecules';
 
 class Home extends Component {
@@ -22,11 +24,13 @@ class Home extends Component {
       >
         <Helmet title="home" />
         <WeddingCard />
+        <WeekendPlan />
         <WeddingPlaceCard />
         <PlaceCard />
+        <SleepPlace />
         <GuestsCard />
         <OurHistoryCard />
-        <WeekendPlan />
+        <WeedingList />
       </div>);
   }
 }

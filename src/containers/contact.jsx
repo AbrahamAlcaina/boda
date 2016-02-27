@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { createSelector } from 'reselect';
 import { connect } from 'react-redux';
-import style from './app.style';
 import * as navigationActions from '../reducers/navigation';
 
 class Contact extends Component {

@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import { injectIntl, intlShape } from 'react-intl';
 import { browserHistory } from 'react-router';
-import Place from 'material-ui/lib/svg-icons/maps/place';
-import Colors from 'material-ui/lib/styles/colors';
 import Card from 'material-ui/lib/card/card';
+import Colors from 'material-ui/lib/styles/colors';
+import Fly from 'material-ui/lib/svg-icons/action/flight-takeoff';
 import CardHeader from 'material-ui/lib/card/card-header';
 import CardMedia from 'material-ui/lib/card/card-media';
 import style from './card.style';
 
-class WeddingPlaceCard extends Component {
+class WeekendPlan extends Component {
   static propTypes = {
     intl: intlShape.isRequired
   };
 
-  onClick = () => browserHistory.push('/place');
+  onClick = () => browserHistory.push('/weedingList');
 
   render() {
     const { formatMessage } = this.props.intl;
@@ -25,30 +25,28 @@ class WeddingPlaceCard extends Component {
         >
           <CardHeader
             title={formatMessage({
-              id: 'home.weddingPlace',
-              default: 'Celebració de la boda'
+              id: 'home.weedingList'
             })}
             subtitle={
               formatMessage({
-                id: 'home.weddingPlaceSubtitle',
-                default: 'On es la gresca!'
+                id: 'home.weedingListSubtitle'
               })
             }
             style={style.cardHeader}
           />
           <CardMedia>
-            <Place
+            <Fly
               style={{
-                width: 200,
-                height: 200
+                height: 200,
+                width: 200
               }}
               color={Colors.grey800}
             />
           </CardMedia>
-        </Card>
-      </div>
+          </Card>
+        </div>
       );
   }
 }
 
-export default injectIntl(WeddingPlaceCard);
+export default injectIntl(WeekendPlan);

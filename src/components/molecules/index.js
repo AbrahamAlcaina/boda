@@ -5,3 +5,5 @@ export GuestsCard from './guestsCard';
 export WeddingPlaceCard from './weddingPlaceCard';
 export PlaceCard from './placeCard';
 export WeekendPlan from './weekendPlan';
+export WeedingList from './weedingList';
+export SleepPlace from './sleepPlace';
