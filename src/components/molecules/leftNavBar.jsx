@@ -1,9 +1,11 @@
 import React, { PropTypes } from 'react';
 import LeftNav from 'material-ui/lib/left-nav';
 import MenuItem from 'material-ui/lib/menus/menu-item';
+import AppBar from 'material-ui/lib/app-bar';
 import { browserHistory } from 'react-router';
+import { injectIntl, FormattedMessage } from 'react-intl';
 
-export default class LeftNavBar extends React.Component {
+class LeftNavBar extends React.Component {
   static propTypes = {
     navigation: PropTypes.any.isRequired
   };
@@ -31,6 +33,16 @@ export default class LeftNavBar extends React.Component {
           openRight
           onRequestChange={this.handleRequestChange}
         >
+          <AppBar
+            showMenuIconButton={false}
+            title={
+              <FormattedMessage
+                id="Nav.navigateOptions"
+                description="Title options navigation"
+                defaultMessage="Navegar"
+              />
+            }
+          />
           {
             this.props.navigation.map(option => (
                 <MenuItem
@@ -47,3 +59,5 @@ export default class LeftNavBar extends React.Component {
     );
   }
 }
+
+export default injectIntl(LeftNavBar);
