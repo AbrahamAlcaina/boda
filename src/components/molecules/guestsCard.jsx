@@ -4,8 +4,6 @@ import { browserHistory } from 'react-router';
 import Card from 'material-ui/lib/card/card';
 import CardHeader from 'material-ui/lib/card/card-header';
 import CardMedia from 'material-ui/lib/card/card-media';
-import CardActions from 'material-ui/lib/card/card-actions';
-import FlatButton from 'material-ui/lib/raised-button';
 import style from './card.style';
 
 class GuestsCard extends Component {
@@ -18,8 +16,9 @@ class GuestsCard extends Component {
   render() {
     const { formatMessage } = this.props.intl;
     return (
-      <div className="col-xs-12 col-sm-12 col-md-3 col-lg-2" style={style.container}>
+      <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3" style={style.container}>
         <Card
+          style={style.cardSmall}
           onTouchTap={this.onClick}
         >
           <CardHeader
@@ -37,13 +36,6 @@ class GuestsCard extends Component {
           <CardMedia>
             <img src="img/guests.jpg" />
           </CardMedia>
-          <CardActions>
-            <FlatButton primary label={formatMessage({
-              id: 'home.guests.confirm',
-              default: 'Confirmar assistencia'
-            })}
-            />
-          </CardActions>
         </Card>
       </div>
       );

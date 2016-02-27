@@ -16,19 +16,19 @@ class WeekendPlan extends Component {
   render() {
     const { formatMessage } = this.props.intl;
     return (
-      <div className="col-xs-12 col-sm-12 col-md-3 col-lg-2" style={style.container}>
+      <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3" style={style.container}>
         <Card
-          style={style.card}
+          style={style.cardSmall}
           onTouchTap={this.onClick}
         >
           <CardHeader
             title={formatMessage({
-              id: 'home.WeekendPlan',
+              id: 'home.weekendPlan',
               default: 'Pla del finde'
             })}
             subtitle={
               formatMessage({
-                id: 'home.WeekendPlanSubtitle',
+                id: 'home.weekendPlanSubtitle',
                 default: 'Com anirá la cosa'
               })
             }

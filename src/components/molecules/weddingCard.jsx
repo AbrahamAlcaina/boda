@@ -14,7 +14,7 @@ class WeddingCard extends Component {
     return (
       <div className="col-xs-12 col-sm-12 col-md-9 col-lg-8" style={style.container}>
         <Card
-          style={style.card}
+          style={style.cardBig}
         >
         <CardHeader
           title={formatMessage({
@@ -30,7 +30,7 @@ class WeddingCard extends Component {
           }
         />
         <CardMedia>
-          <img src="/img/portada.jpg" />
+          <img src="/img/portada.jpg" className="img-responsive"/>
         </CardMedia>
       </Card>
     </div>

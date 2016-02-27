@@ -19,7 +19,7 @@ class WeddingPlaceCard extends Component {
     return (
       <div className="col-xs-12 col-sm-12 col-md-3 col-lg-4" style={style.container}>
         <Card
-          style={style.card}
+          style={style.cardBig}
           onTouchTap={this.onClick}
         >
           <CardHeader
