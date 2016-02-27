@@ -25,43 +25,48 @@ export const loadNavigationOptions = createAction(LOAD_NAVIGATION, () => ({
     const navigation = [
       {
         path: '/',
-        name: 'home'
+        name: 'home',
+        title: 'nav.right.home'
       },
       {
         path: '/weekendPlan',
-        name: 'weekendPlan'
+        name: 'weekendPlan',
+        title: 'nav.right.weekendPlan'
       },
       {
         path: '/contact',
-        name: 'contact'
+        name: 'contact',
+        title: 'nav.right.contact'
       },
       {
         path: '/guest',
-        name: 'guest'
+        name: 'guest',
+        title: 'nav.right.guests'
       },
       {
         path: '/history',
-        name: 'history'
+        name: 'history',
+        title: 'nav.right.history'
       },
       {
         path: '/landing',
-        name: 'landing'
+        name: 'landing',
+        title: 'nav.right.landing'
       },
       {
         path: '/place',
-        name: 'place'
+        name: 'place',
+        title: 'nav.right.place'
       },
       {
         path: '/schedule',
-        name: 'schedule'
-      },
-      {
-        path: '/stagparty',
-        name: 'stagparty'
+        name: 'schedule',
+        title: 'nav.right.schedule'
       },
       {
         path: '/wedding',
-        name: 'weeding'
+        name: 'weeding',
+        title: 'boda'
       },
     ];
     // simutale load from server

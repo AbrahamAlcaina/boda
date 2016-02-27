@@ -97,7 +97,7 @@ class History extends Component {
                   </div>
                 </li>
                 <li>
-                  <div className="timeline-panel">
+                  <div className="timeline- oñ.-lñl">
                     <div className="timeline-heading">
                       <h4 className="timeline-title">Mussum ipsum cacilds</h4>
                     </div>

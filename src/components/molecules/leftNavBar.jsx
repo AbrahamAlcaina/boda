@@ -50,7 +50,9 @@ class LeftNavBar extends React.Component {
                   value={option.get('path')}
                   key={option.get('name')}
                 >
-                  {option.get('name')}
+                  <FormattedMessage
+                    id={option.get('title')}
+                  />
                 </MenuItem>
             ))
           }

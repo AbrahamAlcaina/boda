@@ -7,6 +7,7 @@ export default (
         <IndexRoute component={containers.Home} />
         <Route path="/contact" component= {containers.Contact} />
         <Route path="/weekendPlan" component= {containers.WeekendPlan} />
+        <Route path="/history" component= {containers.history} />
         <Route path="*" component={containers.NoMatch} />
     </Route>
 );
