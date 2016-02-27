@@ -181,3 +181,5 @@
             right: auto;
         }
 }
+
+#display-google-map img{max-width:none!important;background:none!important;font-size: inherit;}

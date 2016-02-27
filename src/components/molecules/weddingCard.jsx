@@ -28,6 +28,7 @@ class WeddingCard extends Component {
               year: 'numeric'
             })
           }
+          style={style.cardHeader}
         />
         <CardMedia>
           <img src="/img/portada.jpg" className="img-responsive"/>
