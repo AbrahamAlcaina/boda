@@ -1,3 +1,11 @@
 {
-  "nav.title" : "Nicole i Abraham"
+  "nav.title" : "Nicole i Abraham",
+  "home.wedding": "Ens casem",
+  "home.ourHistory": "La nostra història",
+  "home.ourHistorySubtile" : "En viatges",
+  "home.guests" : "Convidats",
+  "home.guestsSubtile" : "LListat de convidats",
+  "home.weddingPlace": "La ceremonia",
+  "home.weddingPlaceSubtitle": "Què farem?",
+  "home.guests.confirm" : "Confirmeu l'assitència"
 }
