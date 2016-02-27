@@ -31,7 +31,7 @@ class WeddingCard extends Component {
           }
         />
         <CardMedia>
-          <img src="/img/pont.jpg" />
+          <img src="/img/portada.jpg" />
         </CardMedia>
       </Card>
     </div>

@@ -3,9 +3,8 @@ import { injectIntl, intlShape } from 'react-intl';
 import Card from 'material-ui/lib/card/card';
 import CardHeader from 'material-ui/lib/card/card-header';
 import CardMedia from 'material-ui/lib/card/card-media';
-import Place from 'material-ui/lib/svg-icons/maps/place';
-import Colors from 'material-ui/lib/styles/colors';
 import style from './card.style';
+import YouTube from 'react-youtube';
 
 class WeddingPlaceCard extends Component {
   static propTypes = {
@@ -30,16 +29,11 @@ class WeddingPlaceCard extends Component {
                 default: 'On es la gresca!'
               })
             }
-            avatar={
-              <Place color={Colors.blue500} style={{
-                width: 300,
-                heigth: 300
-              }}
-              />
-            }
           />
           <CardMedia>
-            <img src="img/garden.jpg" />
+            <YouTube
+              videoId="8a0mTUbaGOc"
+            />
           </CardMedia>
         </Card>
       </div>

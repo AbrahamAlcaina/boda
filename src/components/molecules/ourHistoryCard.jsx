@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { injectIntl, intlShape } from 'react-intl';
 import Card from 'material-ui/lib/card/card';
-import CardTitle from 'material-ui/lib/card/card-title';
+import CardHeader from 'material-ui/lib/card/card-header';
 import CardMedia from 'material-ui/lib/card/card-media';
 import style from './card.style';
 
@@ -17,13 +17,11 @@ class OurHistoryCard extends Component {
         <Card
           style={style.card}
         >
-          <CardMedia>
-            <img src="/img/praga.jpg" />
-          </CardMedia>
-          <CardTitle title={formatMessage({
-            id: 'home.ourHistory',
-            default: 'La nostra história'
-          })}
+          <CardHeader
+            title={formatMessage({
+              id: 'home.ourHistory',
+              default: 'La nostra história'
+            })}
             subtitle={
               formatMessage({
                 id: 'home.ourHistorySubtile',
@@ -31,6 +29,9 @@ class OurHistoryCard extends Component {
               })
             }
           />
+          <CardMedia>
+            <img src="/img/ourHistory.jpg" />
+          </CardMedia>
         </Card>
       </div>
       );

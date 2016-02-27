@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Helmet from 'react-helmet';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 import { WeddingCard,
@@ -21,11 +20,11 @@ class Home extends Component {
         className="row"
       >
         <WeddingCard />
-        <WeekendPlan />
-        <GuestsCard />
         <WeddingPlaceCard />
         <PlaceCard />
+        <GuestsCard />
         <OurHistoryCard />
+        <WeekendPlan />
       </div>);
   }
 }

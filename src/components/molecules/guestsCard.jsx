@@ -32,11 +32,7 @@ class GuestsCard extends Component {
             }
           />
           <CardMedia>
-            <AccountBox color={Colors.blue500} style={{
-              height: '100%',
-              with: '100%'
-            }}
-            />
+            <img src="img/guests.jpg" />
           </CardMedia>
           <CardActions>
             <FlatButton primary label={formatMessage({
