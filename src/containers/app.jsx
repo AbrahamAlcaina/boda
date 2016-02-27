@@ -5,6 +5,8 @@ import { createSelector } from 'reselect';
 import { connect } from 'react-redux';
 import style from './app.style';
 import * as navigationActions from '../reducers/navigation';
+import ThemeManager from 'material-ui/lib/styles/theme-manager';
+import theme from '../config/theme';
 
 class App extends Component {
 
@@ -15,6 +17,16 @@ class App extends Component {
     navigation: PropTypes.any,
     loadNavigationOptions: PropTypes.func.isRequired
   };
+
+  static childContextTypes = {
+    muiTheme: React.PropTypes.object,
+  };
+
+  getChildContext() {
+    return {
+      muiTheme: ThemeManager.getMuiTheme(theme)
+    };
+  }
 
   componentDidMount() {
     this.props.loadNavigationOptions();

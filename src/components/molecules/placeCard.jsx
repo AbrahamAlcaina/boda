@@ -15,7 +15,7 @@ class PlaceCard extends Component {
   render() {
     const { formatMessage } = this.props.intl;
     return (
-      <div className="col-xs-12 col-sm-10 col-md-3 col-lg-4" style={style.container}>
+      <div className="col-xs-12 col-sm-12 col-md-3 col-lg-4" style={style.container}>
         <Card
           style={style.card}
         >
