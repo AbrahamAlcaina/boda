@@ -28,6 +28,7 @@ export default class LeftNavBar extends React.Component {
           docked= {false}
           width={200}
           open={this.state.open}
+          openRight
           onRequestChange={this.handleRequestChange}
         >
           {

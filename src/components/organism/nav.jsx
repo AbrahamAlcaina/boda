@@ -32,7 +32,7 @@ export default class Nav extends React.Component {
           <IconButton onTouchTap={this.handleLeftIconButtonTouchTap}><Menu /></IconButton>
         }
       />
-      <LeftNavBar openRight ref={'leftNav'} navigation={this.props.navigation} />
+      <LeftNavBar ref={'leftNav'} navigation={this.props.navigation} />
     </div>
     );
   }

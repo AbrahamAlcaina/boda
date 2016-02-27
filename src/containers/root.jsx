@@ -5,6 +5,7 @@ class Root extends Component {
 
   static propTypes = {
     content: PropTypes.string,
+    css: PropTypes.object,
     initialState: PropTypes.object.isRequired,
     head: PropTypes.shape({
       title: PropTypes.shape({
@@ -88,7 +89,7 @@ class Root extends Component {
           <meta property="og:url" content="http://nicoleiabraham.com/" />
           <meta property="og:type" content="website" />
 
-          <style dangerouslySetInnerHTML={{__html: this.props.css}} />
+          <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
           <link
             href="//fonts.googleapis.com/css?family=Roboto:400,300,500,700"
             rel="stylesheet"
@@ -99,7 +100,7 @@ class Root extends Component {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="mobile-web-app-capable" content="yes" />
-          <meta name="theme-color" content="#00bcd4" />
+          <meta name="theme-color" content="#f48fb1" />
           <script dangerouslySetInnerHTML={{ __html: scrollFunction }}></script>
 
         </head>
