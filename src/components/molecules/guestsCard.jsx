@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { injectIntl, intlShape } from 'react-intl';
 import { browserHistory } from 'react-router';
 import Card from 'material-ui/lib/card/card';
+import Men from 'material-ui/lib/svg-icons/action/accessibility';
 import CardHeader from 'material-ui/lib/card/card-header';
 import CardMedia from 'material-ui/lib/card/card-media';
 import style from './card.style';
@@ -34,7 +35,12 @@ class GuestsCard extends Component {
             }
           />
           <CardMedia>
-            <img src="img/guests.jpg" />
+            <Men
+              style={{
+                height: 200,
+                width: 200
+              }}
+            />
           </CardMedia>
         </Card>
       </div>

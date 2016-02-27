@@ -3,6 +3,7 @@ import { injectIntl, intlShape } from 'react-intl';
 import Card from 'material-ui/lib/card/card';
 import CardHeader from 'material-ui/lib/card/card-header';
 import CardMedia from 'material-ui/lib/card/card-media';
+import Hotel from 'material-ui/lib/svg-icons/maps/hotel';
 import { browserHistory } from 'react-router';
 import style from './card.style';
 
@@ -34,7 +35,12 @@ class PlaceCard extends Component {
             }
           />
           <CardMedia>
-            <img src="img/bungalows.jpg" />
+            <Hotel
+              style={{
+                height: 200,
+                width: 200
+              }}
+            />
           </CardMedia>
           </Card>
         </div>

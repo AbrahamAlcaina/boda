@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { injectIntl, intlShape } from 'react-intl';
 import { browserHistory } from 'react-router';
+import Colors from 'material-ui/lib/styles/colors';
 import Card from 'material-ui/lib/card/card';
 import CardHeader from 'material-ui/lib/card/card-header';
+import Heart from 'material-ui/lib/svg-icons/action/favorite-border';
 import CardMedia from 'material-ui/lib/card/card-media';
 import style from './card.style';
 
@@ -34,7 +36,13 @@ class OurHistoryCard extends Component {
             }
           />
           <CardMedia>
-            <img src="/img/ourHistory.jpg" />
+            <Heart
+              style={{
+                height: 200,
+                width: 200
+              }}
+              color={Colors.pink500}
+            />
           </CardMedia>
         </Card>
       </div>

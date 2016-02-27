@@ -12,7 +12,7 @@ class WeddingCard extends Component {
   render() {
     const { formatMessage, formatTime } = this.props.intl;
     return (
-      <div className="col-xs-12 col-sm-12 col-md-9 col-lg-8" style={style.container}>
+      <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12" style={style.container}>
         <Card
           style={style.cardBig}
         >

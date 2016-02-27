@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { injectIntl, intlShape } from 'react-intl';
 import { browserHistory } from 'react-router';
+import Place from 'material-ui/lib/svg-icons/maps/place';
 import Card from 'material-ui/lib/card/card';
 import CardHeader from 'material-ui/lib/card/card-header';
 import CardMedia from 'material-ui/lib/card/card-media';
 import style from './card.style';
-import YouTube from 'react-youtube';
 
 class WeddingPlaceCard extends Component {
   static propTypes = {
@@ -17,9 +17,9 @@ class WeddingPlaceCard extends Component {
   render() {
     const { formatMessage } = this.props.intl;
     return (
-      <div className="col-xs-12 col-sm-12 col-md-3 col-lg-4" style={style.container}>
+      <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3" style={style.container}>
         <Card
-          style={style.cardBig}
+          style={style.cardSmall}
           onTouchTap={this.onClick}
         >
           <CardHeader
@@ -35,8 +35,11 @@ class WeddingPlaceCard extends Component {
             }
           />
           <CardMedia>
-            <YouTube
-              videoId="8a0mTUbaGOc"
+            <Place
+              style={{
+                width: 200,
+                height: 200
+              }}
             />
           </CardMedia>
         </Card>

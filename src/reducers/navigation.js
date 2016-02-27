@@ -39,7 +39,7 @@ export const loadNavigationOptions = createAction(LOAD_NAVIGATION, () => ({
         title: 'nav.right.contact'
       },
       {
-        path: '/guest',
+        path: '/guests',
         name: 'guest',
         title: 'nav.right.guests'
       },
