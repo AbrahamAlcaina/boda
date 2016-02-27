@@ -39,7 +39,7 @@ class LeftNavBar extends React.Component {
               <FormattedMessage
                 id="Nav.navigateOptions"
                 description="Title options navigation"
-                defaultMessage="Navegar"
+                defaultMessage="Navega"
               />
             }
           />
@@ -60,4 +60,4 @@ class LeftNavBar extends React.Component {
   }
 }
 
-export default injectIntl(LeftNavBar);
+export default LeftNavBar;
