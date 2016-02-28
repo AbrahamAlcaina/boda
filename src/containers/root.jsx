@@ -108,7 +108,6 @@ class Root extends Component {
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="theme-color" content="#d81b60" />
           <script dangerouslySetInnerHTML={{ __html: scrollFunction }}></script>
-
         </head>
         <body style={styles.body}>
             <div id="root" dangerouslySetInnerHTML={{ __html: this.props.content }} />

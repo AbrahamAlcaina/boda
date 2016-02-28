@@ -9,7 +9,7 @@ class Footer extends Component {
 
   render() {
     return (
-      <footer style={style.container}>
+      <footer style={style.container} className="navbar navbar-fixed-bottom">
         Hand crafted with <Heart
           style={{
             height: 20,

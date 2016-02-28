@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { createSelector } from 'reselect';
 import { connect } from 'react-redux';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, injectIntl, intlShape } from 'react-intl';
 import * as navigationActions from '../reducers/navigation';
 
 class Guests extends Component {
+    static propTypes = {
+      intl: intlShape.isRequired
+    };
     render() {
+      const { formatMessage } = this.props.intl;
       return (
           <div>
               <Helmet title="guests" />
@@ -27,4 +31,4 @@ const selector = createSelector(
 
 const actions = Object.assign({}, navigationActions);
 
-export default connect(selector, actions)(Guests);
+export default connect(selector, actions)(injectIntl(Guests));
