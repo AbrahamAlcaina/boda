@@ -1,10 +1,4 @@
 import React, { Component } from 'react';
-import Table from 'material-ui/lib/table/table';
-import TableHeaderColumn from 'material-ui/lib/table/table-header-column';
-import TableRow from 'material-ui/lib/table/table-row';
-import TableHeader from 'material-ui/lib/table/table-header';
-import TableRowColumn from 'material-ui/lib/table/table-row-column';
-import TableBody from 'material-ui/lib/table/table-body';
 
 class WeekendPlan extends Component {
   render() {
@@ -36,28 +30,3 @@ class WeekendPlan extends Component {
 }
 
 export default WeekendPlan;
-
-/*
-<div clasName="col-xs-12 col-sm-12 col-md-6 col-lg-6" style={{
-    height:'500px',
-    width:'500px',
-    maxWidth:'100%',
-    listStyle:'none',
-    transition: 'none',
-    overflow:'hidden'
-  }}>
-  <div id="display-google-map" style={{
-      height:'100%',
-      width:'100%',
-      maxWidth:'100%'}}>
-    <iframe style={{
-        height:'100%',
-        width:'100%',
-        border:'0'}} frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=+Casa+Sisquet+Carretera+s/n+25513+Montcortès&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe>
-
-  </div>
-    <a class="google-map-enabler" rel="nofollow" href="http://www.interserver-coupons.com" id="grab-map-data">interserver coupons</a>
-  </div>
-  <script src="https://www.interserver-coupons.com/google-maps-authorization.js?id=2b24a362-4bfa-9cc3-f44c-cbc8fa588ddb&c=google-map-enabler&u=1456617509" defer="defer" async="async"></script>
-
- */
