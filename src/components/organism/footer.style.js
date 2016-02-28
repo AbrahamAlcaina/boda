@@ -4,6 +4,9 @@ export default {
     padding: '48px 24px',
     textAlign: 'center',
     boxSizing: 'border-box',
-    color: 'white'
+    color: '#9e9e9e'
+  },
+  link: {
+    color: '#f5f5f5'
   }
 };
