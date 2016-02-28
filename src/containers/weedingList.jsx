@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { createSelector } from 'reselect';
 import { connect } from 'react-redux';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 import * as navigationActions from '../reducers/navigation';
 
-class Guests extends Component {
+class WeedingList extends Component {
     render() {
       return (
           <div>
-              <Helmet title="guests" />
+              <Helmet title="weedingList" />
                 <h1>
                   <FormattedMessage
-                    id="home.guests"
+                    id="home.weedingList"
                   />
                 </h1>
           </div>
@@ -21,10 +21,10 @@ class Guests extends Component {
 }
 
 const selector = createSelector(
-  [state => state.get('guests')],
-  state => ({ guests: state.get('guests') })
+  [state => state.get('weedingList')],
+  state => ({ weedingList: state.get('weedingList') })
 );
 
 const actions = Object.assign({}, navigationActions);
 
-export default connect(selector, actions)(Guests);
+export default connect(selector, actions)(WeedingList);

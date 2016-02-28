@@ -9,6 +9,7 @@ class Place extends Component {
       return (
           <div>
               <Helmet title="place" />
+              <h1>On ho celebrem</h1>
           </div>
       );
     }

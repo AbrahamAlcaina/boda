@@ -13,7 +13,7 @@ class OurHistoryCard extends Component {
     intl: intlShape.isRequired
   };
 
-  onClick = () => browserHistory.push('/history');
+  onClick = () => browserHistory.push('/our-history');
 
   render() {
     const { formatMessage } = this.props.intl;

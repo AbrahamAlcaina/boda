@@ -2,16 +2,20 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { createSelector } from 'reselect';
 import { connect } from 'react-redux';
-import style from './app.style';
+import { FormattedMessage } from 'react-intl';
 import * as navigationActions from '../reducers/navigation';
 
-class History extends Component {
-    render() {
+class OurHistory extends Component {
       render() {
         return (
           <div className="container">
-            <div className="page-header">
-                <h1 id="timeline">Timeline</h1>
+            <Helmet title="guests" />
+              <div className="page-header">
+                <h1 id="timeline">
+                  <FormattedMessage
+                    id="home.ourHistory"
+                  />
+                </h1>
             </div>
             <ul className="timeline">
                 <li>
@@ -123,7 +127,7 @@ class History extends Component {
         );
       }
     }
-}
+
 
 const selector = createSelector(
   [state => state.get('history')],
@@ -132,4 +136,4 @@ const selector = createSelector(
 
 const actions = Object.assign({}, navigationActions);
 
-export default connect(selector, actions)(History);
+export default connect(selector, actions)(OurHistory);

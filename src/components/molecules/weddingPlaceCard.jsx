@@ -13,7 +13,7 @@ class WeddingPlaceCard extends Component {
     intl: intlShape.isRequired
   };
 
-  onClick = () => browserHistory.push('/place');
+  onClick = () => browserHistory.push('/weeding-place');
 
   render() {
     const { formatMessage } = this.props.intl;

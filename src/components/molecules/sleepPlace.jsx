@@ -13,7 +13,7 @@ class SleepPlace extends Component {
     intl: intlShape.isRequired
   };
 
-  onClick = () => browserHistory.push('/place');
+  onClick = () => browserHistory.push('/sleep-place');
 
   render() {
     const { formatMessage } = this.props.intl;

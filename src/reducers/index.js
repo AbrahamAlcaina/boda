@@ -6,9 +6,11 @@ import initializeState from './initializeState';
 import landing from './landing';
 import navigation from './navigation';
 import place from './place';
-import schedule from './schedule';
 import stagparty from './stagparty';
+import weedingPlace from './weedingPlace';
 import weeding from './wedding';
+import sleepPlace from './sleepPlace';
+import weedingList from './weedingList';
 
 const rootReducer = combineReducers({
   contact,
@@ -18,9 +20,11 @@ const rootReducer = combineReducers({
   landing,
   navigation,
   place,
-  schedule,
   stagparty,
-  weeding
+  weeding,
+  weedingPlace,
+  sleepPlace,
+  weedingList
 });
 
 export default rootReducer;

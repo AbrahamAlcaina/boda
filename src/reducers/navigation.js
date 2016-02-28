@@ -29,29 +29,14 @@ export const loadNavigationOptions = createAction(LOAD_NAVIGATION, () => ({
         title: 'nav.right.home'
       },
       {
-        path: '/weekendPlan',
+        path: '/weekend-plan',
         name: 'weekendPlan',
         title: 'nav.right.weekendPlan'
       },
       {
-        path: '/contact',
-        name: 'contact',
-        title: 'nav.right.contact'
-      },
-      {
-        path: '/guests',
-        name: 'guest',
-        title: 'nav.right.guests'
-      },
-      {
-        path: '/history',
-        name: 'history',
-        title: 'nav.right.history'
-      },
-      {
-        path: '/landing',
-        name: 'landing',
-        title: 'nav.right.landing'
+        path: '/weeding-place',
+        name: 'weedingPlace',
+        title: 'nav.right.weedingPlace'
       },
       {
         path: '/place',
@@ -59,14 +44,24 @@ export const loadNavigationOptions = createAction(LOAD_NAVIGATION, () => ({
         title: 'nav.right.place'
       },
       {
-        path: '/schedule',
-        name: 'schedule',
-        title: 'nav.right.schedule'
+        path: '/sleep-place',
+        name: 'sleepPlace',
+        title: 'nav.right.sleepPlace'
       },
       {
-        path: '/wedding',
-        name: 'weeding',
-        title: 'nav.right.weeding'
+        path: '/guests',
+        name: 'guests',
+        title: 'nav.right.guests'
+      },
+      {
+        path: '/our-history',
+        name: 'ourHistory',
+        title: 'nav.right.ourHistory'
+      },
+      {
+        path: '/weeding-list',
+        name: 'weedingList',
+        title: 'nav.right.weedingList'
       },
     ];
     // simutale load from server
