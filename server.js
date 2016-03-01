@@ -1,4 +1,5 @@
 require('babel-core/register');
+require("babel-polyfill");
 const compression = require('compression');
 const path = require('path');
 const express = require('express');
@@ -6,6 +7,7 @@ const webpack = require('webpack');
 const dev = require('webpack-dev-middleware');
 const hot = require('webpack-hot-middleware');
 const config = require('./webpack.config.js');
+const configGraphQL = require('./src/server').default;
 
 const port = process.env.PORT || 3000;
 const server = express();
@@ -48,6 +50,8 @@ if (!process.env.NODE_ENV) {
   }));
   server.use(hot(compiler));
 }
+
+configGraphQL(server);
 
 server.get('*', require('./src').serverMiddleware);
 
