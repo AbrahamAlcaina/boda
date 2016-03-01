@@ -12,7 +12,10 @@ class WeddingCard extends Component {
   render() {
     const { formatMessage, formatTime } = this.props.intl;
     return (
-      <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12" style={style.container}>
+      <div
+        className="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1"
+        style={style.container}
+      >
         <Card
           style={style.cardBig}
         >
@@ -31,7 +34,7 @@ class WeddingCard extends Component {
           style={style.cardHeader}
         />
         <CardMedia>
-          <img src="/img/portada.jpg" className="img-responsive"/>
+          <img src="/img/pont2.jpg" className="img-responsive"/>
         </CardMedia>
       </Card>
     </div>

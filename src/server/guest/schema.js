@@ -15,7 +15,7 @@ const GuestSchema = mongoose.Schema({
   group:{
     type: String,
     description: 'group',
-    enum: ['abrahamFamily', 'nicoleFamily', 'abrahamFriends', 'nicoleFrieds', 'tremp', 'moncortes', 'other', 'holland'],
+    enum: ['abrahamFamily', 'nicoleFamily', 'bdnFriends', 'nicoleFrieds', 'tremp', 'moncortes', 'other', 'holland'],
     index: true
   },
   companions: [
