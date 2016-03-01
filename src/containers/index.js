@@ -10,3 +10,4 @@ export Guests from './guests';
 export OurHistory from './ourHistory';
 export WeedingList from './weedingList';
 export Contact from './contact';
+export GuestsList from './guestsList';

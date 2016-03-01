@@ -3,38 +3,35 @@ import { injectIntl, intlShape } from 'react-intl';
 import Card from 'material-ui/lib/card/card';
 import CardHeader from 'material-ui/lib/card/card-header';
 import CardMedia from 'material-ui/lib/card/card-media';
+import { browserHistory } from 'react-router';
 import style from './card.style';
 
-class WeddingCard extends Component {
+class FriendsTrempCard extends Component {
   static propTypes = {
     intl: intlShape.isRequired
   };
+
+  onClick = () => browserHistory.push('/guests-list/friends-tremp');
+
   render() {
-    const { formatMessage, formatTime } = this.props.intl;
+    const { formatMessage } = this.props.intl;
     return (
       <div
-        className="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1"
+        className="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-md-offset-1 col-lg-offset-1"
         style={style.container}
       >
         <Card
           style={style.cardBig}
+          onTouchTap={this.onClick}
         >
         <CardHeader
           title={formatMessage({
-            id: 'home.wedding',
-            default: 'other'
+            id: 'guest.friendsTremp'
           })}
-          subtitle={
-            formatTime(new Date(2016, 4, 28), {
-              day: 'numeric',
-              month: 'long',
-              year: 'numeric'
-            })
-          }
           style={style.cardHeader}
         />
         <CardMedia>
-          <img src="img/pont2.jpg" className="img-responsive"/>
+          <img src="img/friendsTremp.jpg" className="img-responsive"/>
         </CardMedia>
       </Card>
     </div>
@@ -42,4 +39,4 @@ class WeddingCard extends Component {
   }
 }
 
-export default injectIntl(WeddingCard);
+export default injectIntl(FriendsTrempCard);

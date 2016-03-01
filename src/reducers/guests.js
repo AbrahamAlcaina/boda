@@ -13,17 +13,30 @@ export default handleActions({
       .update(guest => guest
       .set('loading', false)
       .set('loaded', true)
-      .set('guest', Immutable.fromJS(action.payload.guest))),
+      .set('guests', Immutable.fromJS(action.payload))),
   LOAD_GUEST_ERROR: (state, action) => state
     .set('loaded', false)
     .set('loading', false)
     .set('error', Immutable.fromJS(action.payload))
 }, initialState);
 
-export const loadApp = createAction(LOAD_GUEST, () => ({
-  promise: new Promise(resolve => {
-    const guest = {};
-    // simutale load from server
-    setTimeout(() => resolve(guest), 500);
-  })
+export const loadGuests = createAction(LOAD_GUEST, () => ({
+  promise: new Promise(resolve =>
+    fetch('/graphql', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/graphql'
+      },
+      body: `
+        {
+          guests {
+            name
+            type
+            group
+          }
+        }
+      `
+    })
+    .then(response => response.json())
+    .then(data => resolve(data.data.guests)))
 }));

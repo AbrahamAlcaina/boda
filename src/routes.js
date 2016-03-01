@@ -10,6 +10,7 @@ export default (
         <Route path="/place" component= {containers.Place} />
         <Route path="/sleep-place" component= {containers.SleepPlace} />
         <Route path="/guests" component= {containers.Guests} />
+        <Route path="/guests-list/:group" component= {containers.GuestsList} />
         <Route path="/our-history" component= {containers.OurHistory} />
         <Route path="/weeding-list" component= {containers.WeedingList} />
         <Route path="*" component={containers.NoMatch} />
