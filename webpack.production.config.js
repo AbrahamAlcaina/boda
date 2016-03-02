@@ -25,6 +25,9 @@ module.exports = {
         new CleanPlugin({
             files: ['dist/*']
         }),
+        new webpack.DefinePlugin({
+          'process.env.NODE_ENV': '"development"'
+        }),
         new webpack.optimize.UglifyJsPlugin({
             compressor: {
                 warnings: false,
