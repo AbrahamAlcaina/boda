@@ -17,7 +17,7 @@ class FriendsTrempCard extends Component {
     const { formatMessage } = this.props.intl;
     return (
       <div
-        className="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-md-offset-1 col-lg-offset-1"
+        className="col-xs-12 col-sm-12 col-md-5 col-lg-5"
         style={style.container}
       >
         <Card

@@ -17,8 +17,16 @@ class GuestList extends Component {
         group: PropTypes.string
       }),
       changeAttend: PropTypes.func,
-      changeNeedPlace: PropTypes.func
+      changeNeedPlace: PropTypes.func,
+      loadGuests: PropTypes.func
     };
+
+    componentWillMount() {
+      if (!this.props.guests) {
+        this.props.loadGuests();
+      }
+    }
+
     onChangeAttend = (id, attend) => this.props.changeAttend(id, attend);
     onChangePlace = (id, attend) => this.props.changeNeedPlace(id, attend);
     render() {
@@ -36,7 +44,7 @@ class GuestList extends Component {
               <div className="row">
                 <List>
                   {guests.map(guest =>
-                    (<List key={guest.get('name')} subheader={guest.get('name')}>
+                    (<List key={guest.get('name')} subheader={<h2>{guest.get('name')}</h2>}>
                         <ListItem
                           primaryText={
                             <FormattedMessage id="guestList.attend" />
