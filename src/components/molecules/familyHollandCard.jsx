@@ -31,7 +31,7 @@ class FamilyHolland extends Component {
           style={style.cardHeader}
         />
         <CardMedia>
-          <img src="img/FamilyHolland.jpg" className="img-responsive"/>
+          <img src="img/familyHolland.jpg" className="img-responsive"/>
         </CardMedia>
       </Card>
     </div>
