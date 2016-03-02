@@ -26,7 +26,7 @@ class FriendsBDNCard extends Component {
         >
         <CardHeader
           title={formatMessage({
-            id: 'guest.friendsBDN'
+            id: 'guest.friends-bdn'
           })}
           style={style.cardHeader}
         />

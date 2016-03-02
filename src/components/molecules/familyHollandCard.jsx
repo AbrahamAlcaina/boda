@@ -26,7 +26,7 @@ class FamilyHolland extends Component {
         >
         <CardHeader
           title={formatMessage({
-            id: 'guest.FamilyHolland'
+            id: 'guest.family-holland'
           })}
           style={style.cardHeader}
         />

@@ -26,7 +26,7 @@ class FamilyTrempCard extends Component {
         >
         <CardHeader
           title={formatMessage({
-            id: 'guest.familyTremp'
+            id: 'guest.family-tremp'
           })}
           style={style.cardHeader}
         />

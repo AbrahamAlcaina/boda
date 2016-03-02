@@ -24,5 +24,13 @@
   "home.weedingList": "Lluna mel",
   "home.weedingListSubtitle": "Contribuir al nostre viatge de noces",
   "home.sleepPlace": "On dormirem",
-  "home.sleepPlaceSubtitle": "Bungalows a Senterada"
+  "home.sleepPlaceSubtitle": "Bungalows a Senterada",
+  "guestList.needPlace": "necesito allotjament",
+  "guestList.attend": "Asistiré",
+  "guest.family-bdn": "Familia Badalona",
+  "guest.family-tremp": "Familia Tremp",
+  "guest.family-holland": "Familia Holanda",
+  "guest.friends-bcn": "Amics Barcelona",
+  "guest.friends-bdn": "Amics Badalona",
+  "guest.friends-tremp" : "Amics Tremp"
 }

@@ -28,7 +28,15 @@ const GuestSchema = mongoose.Schema({
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Guest'
     }
-  ]
+  ],
+  attend: {
+    type: Boolean,
+    description: 'The guest attends the weeding'
+  },
+  needPlace: {
+    type: Boolean,
+    description: 'The guest needs place for sleep'
+  }
 });
 
 const Guest = mongoose.model('Guest', GuestSchema);

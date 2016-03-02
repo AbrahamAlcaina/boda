@@ -2,43 +2,65 @@ import React, { Component, PropTypes } from 'react';
 import Helmet from 'react-helmet';
 import { createSelector } from 'reselect';
 import { connect } from 'react-redux';
-import { FormattedMessage, injectIntl, intlShape } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 import List from 'material-ui/lib/lists/list';
 import ListItem from 'material-ui/lib/lists/list-item';
 import Divider from 'material-ui/lib/divider';
 import Checkbox from 'material-ui/lib/checkbox';
-import * as navigationActions from '../reducers/navigation';
+import * as guestActions from '../reducers/guests';
 
 
 class GuestList extends Component {
     static propTypes = {
-      intl: intlShape.isRequired,
-      guests: PropTypes.array
+      guests: PropTypes.any,
+      params: PropTypes.shape({
+        group: PropTypes.string
+      }),
+      changeAttend: PropTypes.func,
+      changeNeedPlace: PropTypes.func
     };
+    onChangeAttend = (id, attend) => this.props.changeAttend(id, attend);
+    onChangePlace = (id, attend) => this.props.changeNeedPlace(id, attend);
     render() {
-      const guests = this.props.guests || [];
+      const group = this.props.params.group;
+      const guests = (this.props.guests || [])
+        .filter(guest => guest.get('group') === group);
       return (
           <div>
               <Helmet title="guests" />
               <h1>
                 <FormattedMessage
-                  id="home.guests"
+                  id={`guest.${group}`}
                 />
               </h1>
               <div className="row">
                 <List>
                   {guests.map(guest =>
-                    (<div key={guest.get('name')}>
+                    (<List key={guest.get('name')} subheader={guest.get('name')}>
                         <ListItem
-                          primaryText={guest.get('name')}
-                        >
-                          <div>
-                            <Checkbox />
-                            <Checkbox />
-                          </div>
-                        </ListItem>
+                          primaryText={
+                            <FormattedMessage id="guestList.attend" />
+                          }
+                          leftCheckbox={
+                            <Checkbox
+                              checked={guest.get('attend')}
+                              onCheck={this.onChangeAttend.bind(this, guest.get('id'), !guest.get('attend'))}
+                            />
+                          }
+                        />
+                        <ListItem
+                          primaryText={
+                            <FormattedMessage id="guestList.needPlace" />
+                          }
+                          leftCheckbox={
+                            <Checkbox
+                              checked={guest.get('needPlace')}
+                              onCheck={this.onChangePlace.bind(this, guest.get('id'), !guest.get('needPlace'))}
+                            />
+                          }
+                        />
                       <Divider />
-                    </div>
+                    </List>
                     )
                   )}
               </List>
@@ -53,6 +75,6 @@ const selector = createSelector(
   state => ({ guests: state.get('guests') })
 );
 
-const actions = Object.assign({}, navigationActions);
+const actions = Object.assign({}, guestActions);
 
 export default connect(selector, actions)(GuestList);

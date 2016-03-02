@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Helmet from 'react-helmet';
 import { createSelector } from 'reselect';
+import { FormattedMessage, injectIntl } from 'react-intl';
 import { connect } from 'react-redux';
-import { FormattedMessage, injectIntl, intlShape } from 'react-intl';
 import * as navigationActions from '../reducers/navigation';
 import * as guestActions from '../reducers/guests';
 
@@ -18,7 +18,7 @@ import {
 
 class Guests extends Component {
     static propTypes = {
-      intl: intlShape.isRequired
+      loadGuests: PropTypes.func.isRequired
     };
 
     componentDidMount() {
@@ -26,7 +26,6 @@ class Guests extends Component {
     }
 
     render() {
-      const { formatMessage } = this.props.intl;
       return (
           <div>
               <Helmet title="guests" />
