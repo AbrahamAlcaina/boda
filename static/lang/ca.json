@@ -32,5 +32,14 @@
   "guest.family-holland": "Familia Holanda",
   "guest.friends-bcn": "Amics Barcelona",
   "guest.friends-bdn": "Amics Badalona",
-  "guest.friends-tremp" : "Amics Tremp"
+  "guest.friends-tremp" : "Amics Tremp",
+  "weekendPlan.welcome": "Benvinguda",
+  "weekendPlan.welcomeP": "Per aprofitar be tot el cap de setmana us recomanem que pujeu el divendres 27 de maig \n  Els bungalows estarán a la vostra disposició a partir de les 15h del mateix divendres \n",
+  "weekendPlan.weeding": "Casament",
+  "weekendPlan.weedingP": "Ens casem al jardí de casa Sisquet.",
+  "weekendPlan.weedingP2": "La ceremònia començarà a les 17h però podeu estar-hi molt abans. El novio estarà a Montcortès des de les 14h. \n Malauradament tirar arròs al jardí esta prohibit però no us preocupeu que us donarem pètals de rosa per llençar. \n",
+  "weekendPlan.celebration": "Celebració",
+  "weekendPlan.celebrationP": "Ho celebrarem al camping de Senterada.",
+  "weekendPlan.celebrationP2": "A les 18h ens esperarà un pica pica a la recepcio mentre\n  A les 20h començarem a sopar i començarem a gaudir de la festa amb música amb directe. \n  Quan acabem de sopar tindrem un DJ que amenizarà la festa, on disposarem de barra lliure fins que acabi la festa.\n Ens ho passarem d'allò més bé.",
+  "weekendPlan.Map": "Veure mapa"
 }

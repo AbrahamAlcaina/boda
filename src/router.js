@@ -28,7 +28,7 @@ if (isClient) {
     localeMessages
   } = window.__LANGUAGE__;
   ReactDOM.render(
-        <IntlProvider locale={locale} messages={localeMessages}>
+        <IntlProvider locale={locale} messages={localeMessages} defaultLocale="ca">
           <Provider store={store}>
               <Router history={browserHistory}>{routes}</Router>
           </Provider>
@@ -41,7 +41,7 @@ function renderComponentWithRoot(Component, componentProps, store, req) {
   const locale = getCurrentLocale(req);
   const localeMessages = translations[locale];
   const componentHtml = renderToStaticMarkup(
-      <IntlProvider locale={locale} messages={localeMessages}>
+      <IntlProvider locale={locale} messages={localeMessages} defaultLocale="ca">
         <Provider store={store}>
           <Component {...componentProps} />
         </Provider>
