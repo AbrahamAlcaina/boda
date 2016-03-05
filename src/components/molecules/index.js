@@ -13,3 +13,4 @@ export FamilyHollandCard from './familyHollandCard';
 export FriendsBCNCard from './friendsBCNCard';
 export FriendsBDNCard from './friendsBDNCard';
 export FriendsTrempCard from './friendsTrempCard';
+export HistoryItem from './historyItem';
