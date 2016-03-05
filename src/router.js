@@ -30,7 +30,12 @@ if (isClient) {
   ReactDOM.render(
         <IntlProvider locale={locale} messages={localeMessages} defaultLocale="ca">
           <Provider store={store}>
-              <Router history={browserHistory}>{routes}</Router>
+              <Router
+                history={browserHistory}
+                onUpdate={() => window.scrollTo(0, 0)}
+              >
+                {routes}
+              </Router>
           </Provider>
         </IntlProvider>,
         document.getElementById('root')
