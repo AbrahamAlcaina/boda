@@ -15,6 +15,12 @@ class SleepPlace extends Component {
                   id="home.sleepPlace"
                 />
               </h1>
+              <div className="row">
+                <img
+                  className="img-responsive"
+                  src="/img/mapa_camping.jpg"
+                />
+              </div>
           </div>
       );
     }

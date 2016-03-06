@@ -16,6 +16,8 @@ class WeddingPlace extends Component {
                 />
               </h1>
               <div className="row">
+                some text
+                url of moncortes
                 <div className="responsive-video">
                     <iframe
                       frameBorder="0"

@@ -1,7 +1,7 @@
 {
   "nav.title" : "Nicole i Abraham",
   "nav.navigateOptions": "Nav.navigateOptions",
-  "nav.right.home": "home",
+  "nav.right.home": "Inici",
   "nav.right.weekendPlan": "Pla cap de setmana",
   "nav.right.weedingPlace": "On ens casem",
   "nav.right.place": "On ho celebrem",
@@ -55,4 +55,5 @@
   "history.10" : "I moltes cosetes més que ens esperan",
   "history.11" : "Lluna de mel a NY ...",
   "history.empty": " "
+
 }

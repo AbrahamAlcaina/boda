@@ -15,6 +15,12 @@ class WeedingList extends Component {
                     id="home.weedingList"
                   />
                 </h1>
+                <div className="row">
+                  <img
+                    className="img-responsive"
+                    src="/img/ny.jpg"
+                  />
+                </div>
           </div>
       );
     }

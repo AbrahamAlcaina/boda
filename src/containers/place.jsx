@@ -3,13 +3,24 @@ import Helmet from 'react-helmet';
 import { createSelector } from 'reselect';
 import { connect } from 'react-redux';
 import * as navigationActions from '../reducers/navigation';
+import { FormattedMessage } from 'react-intl';
 
 class Place extends Component {
     render() {
       return (
           <div>
               <Helmet title="place" />
-              <h1>On ho celebrem</h1>
+              <h1>
+                <FormattedMessage
+                  id="home.placePlace"
+                />
+              </h1>
+              <div className="row">
+                <img
+                  className="img-responsive"
+                  src="/img/celebrem_00.jpg"
+                />
+              </div>
           </div>
       );
     }
