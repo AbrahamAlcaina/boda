@@ -93,14 +93,6 @@ class OurHistory extends Component {
                 imgSrc="/img/future.jpg"
                 text="history.empty"
               />
-              <HistoryItem
-                color={Colors.grey200}
-                title="history.10"
-                imgSrc="/img/ny.jpg"
-                text="history.11"
-                inverted
-                eventClass="danger"
-              />
             </ul>
         </div>
         );

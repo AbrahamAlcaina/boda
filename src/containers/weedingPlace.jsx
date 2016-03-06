@@ -16,8 +16,8 @@ class WeddingPlace extends Component {
                 />
               </h1>
               <div className="row">
-                some text
-                url of moncortes
+                <FormattedMessage id="weddingplace.01" />
+                <br />
                 <div className="responsive-video">
                     <iframe
                       frameBorder="0"

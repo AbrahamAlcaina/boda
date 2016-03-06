@@ -8,7 +8,36 @@ import ListItem from 'material-ui/lib/lists/list-item';
 import Divider from 'material-ui/lib/divider';
 import Checkbox from 'material-ui/lib/checkbox';
 import * as guestActions from '../reducers/guests';
+import RadioButton from 'material-ui/lib/radio-button';
+import RadioButtonGroup from 'material-ui/lib/radio-button-group';
+import { Snackbar } from '../components/organism';
+import OK from 'material-ui/lib/svg-icons/social/mood';
+import KO from 'material-ui/lib/svg-icons/social/mood-bad';
+import Place from 'material-ui/lib/svg-icons/places/room-service';
+import NoPlace from 'material-ui/lib/svg-icons/social/whatshot';
+import Colors from 'material-ui/lib/styles/colors';
 
+const attendNode = (
+  <div>
+    <OK color={Colors.pink500} />
+    <FormattedMessage id="Snackbar.attend" />
+  </div>);
+const noattendNode = (
+  <div>
+    <KO color={Colors.pink500} />
+    <FormattedMessage id="Snackbar.noattend" />
+  </div>);
+const placeNode = (
+  <div>
+    <Place color={Colors.pink500} />
+    <FormattedMessage id="Snackbar.place" />
+  </div>);
+const noplaceNode = (
+  <div>
+    <NoPlace color={Colors.pink500} />
+    <FormattedMessage id="Snackbar.noplace" />
+  </div>);
+let message = attendNode;
 
 class GuestList extends Component {
     static propTypes = {
@@ -27,8 +56,26 @@ class GuestList extends Component {
       }
     }
 
-    onChangeAttend = (id, attend) => this.props.changeAttend(id, attend);
-    onChangePlace = (id, attend) => this.props.changeNeedPlace(id, attend);
+    onChangeAttend = (id, attend) => {
+      this.props.changeAttend(id, attend);
+      if (attend) {
+        message = attendNode;
+      }
+      else {
+        message = noattendNode;
+      }
+      this.refs.snackbar.handleTouchTap();
+    }
+    onChangePlace = (id, attend) => {
+      this.props.changeNeedPlace(id, attend);
+      if (attend) {
+        message = placeNode;
+      }
+      else {
+        message = noplaceNode;
+      }
+      this.refs.snackbar.handleTouchTap();
+    ;};
     render() {
       const group = this.props.params.group;
       const guests = (this.props.guests || [])
@@ -46,21 +93,27 @@ class GuestList extends Component {
                   {guests.map(guest =>
                     (<List key={guest.get('name')} subheader={<h2>{guest.get('name')}</h2>}>
                         <ListItem
-                          primaryText={
-                            <FormattedMessage id="guestList.attend" />
-                          }
-                          leftCheckbox={
-                            <Checkbox
-                              checked={guest.get('attend')}
-                              onCheck={this.onChangeAttend.bind(this, guest.get('id'), !guest.get('attend'))}
-                            />
+                          primaryText={<FormattedMessage id="guestList.attend" />}
+                          leftIcon={
+                              <Checkbox
+                                checked={guest.get('attend')}
+                                onCheck={this.onChangeAttend.bind(this, guest.get('id'), true)}
+                              />}
+                        />
+                        <ListItem
+                          primaryText={<FormattedMessage id="guestList.noattend" />}
+                          leftIcon={
+                              <Checkbox
+                                checked={!guest.get('attend')}
+                                onCheck={this.onChangeAttend.bind(this, guest.get('id'), false)}
+                              />
                           }
                         />
                         <ListItem
                           primaryText={
                             <FormattedMessage id="guestList.needPlace" />
                           }
-                          leftCheckbox={
+                          leftIcon={
                             <Checkbox
                               checked={guest.get('needPlace')}
                               onCheck={this.onChangePlace.bind(this, guest.get('id'), !guest.get('needPlace'))}
@@ -73,6 +126,7 @@ class GuestList extends Component {
                   )}
               </List>
               </div>
+              <Snackbar ref={'snackbar'} message={message} />
           </div>
       );
     }

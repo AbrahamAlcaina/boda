@@ -16,10 +16,17 @@ class SleepPlace extends Component {
                 />
               </h1>
               <div className="row">
+                <FormattedMessage id="sleepplace.01" />
+                <img
+                  className="img-responsive"
+                  src="/img/bungalows.jpg"
+                />
+              <FormattedMessage id="sleepplace.02" />
                 <img
                   className="img-responsive"
                   src="/img/mapa_camping.jpg"
                 />
+              <FormattedMessage id="sleepplace.03" />
               </div>
           </div>
       );

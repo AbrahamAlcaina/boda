@@ -20,6 +20,7 @@ class Place extends Component {
                   className="img-responsive"
                   src="/img/celebrem_00.jpg"
                 />
+                <FormattedMessage id="place.01" />
               </div>
           </div>
       );

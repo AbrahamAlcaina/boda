@@ -16,10 +16,12 @@ class WeedingList extends Component {
                   />
                 </h1>
                 <div className="row">
+                  <FormattedMessage id="honeymoon.01" />
                   <img
                     className="img-responsive"
                     src="/img/ny.jpg"
                   />
+                  <FormattedMessage id="honeymoon.02" />
                 </div>
           </div>
       );
