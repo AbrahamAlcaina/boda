@@ -11,7 +11,7 @@ class WeedingList extends Component {
           <div>
               <Helmet title="weedingList" />
                 <div className="row">
-                  <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
+                  <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3">
                     <h1>
                       <FormattedMessage
                         id="home.weedingList"
@@ -20,7 +20,7 @@ class WeedingList extends Component {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
+                  <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3">
                     <p>
                       <FormattedMessage id="honeymoon.01" />
                     </p>
