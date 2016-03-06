@@ -20,6 +20,11 @@ class WeekendPlan extends Component {
             <FormattedMessage
               id="weekendPlan.welcomeP"
             />
+          </p>
+          <p>
+            <FormattedMessage
+              id="weekendPlan.welcomeP2"
+            />
             &nbsp;
             <a href="/sleep-place">
               <FormattedMessage
@@ -28,7 +33,7 @@ class WeekendPlan extends Component {
             </a>
             &nbsp;
             <FormattedMessage
-              id="weekendPlan.welcomeP2"
+              id="weekendPlan.welcomeP3"
             />
           </p>
           <h2>
