@@ -15,6 +15,14 @@ class WeddingPlace extends Component {
                   id="home.weddingPlace"
                 />
               </h1>
+              <div className="row">
+                <div className="responsive-video">
+                    <iframe
+                      frameBorder="0"
+                      src="//www.youtube.com/embed/8a0mTUbaGOc"
+                    />
+                </div>
+              </div>
           </div>
       );
     }

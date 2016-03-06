@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import Circle from 'material-ui/lib/svg-icons/action/check-circle';
 import Event from 'material-ui/lib/svg-icons/action/event';
 import Colors from 'material-ui/lib/styles/colors';
 import { FormattedMessage, } from 'react-intl';
@@ -11,16 +10,18 @@ class HistoryItem extends Component {
     date: PropTypes.any,
     text: PropTypes.any,
     imgSrc: PropTypes.any,
-    inverted: PropTypes.bool
+    inverted: PropTypes.bool,
+    eventClass: PropTypes.string
   }
   render() {
     const color = this.props.color || Colors.grey200;
     const title = this.props.title;
     const text = this.props.text;
     const imgSrc = this.props.imgSrc;
+    const eventClass = 'timeline-badge ' + this.props.eventClass;
     return (
       <li className={this.props.inverted ? 'timeline-inverted' : '' }>
-        <div className="timeline-badge" >
+        <div className={eventClass} >
         <Event
           style={{
             marginTop: 14

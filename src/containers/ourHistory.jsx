@@ -25,6 +25,7 @@ class OurHistory extends Component {
                 title="history.00"
                 imgSrc="/img/1a_noche.jpg"
                 text="history.empty"
+                eventClass="warning"
                 inverted
               />
               <HistoryItem
@@ -32,6 +33,7 @@ class OurHistory extends Component {
                 title="history.01"
                 imgSrc="/img/granada.jpg"
                 text="history.empty"
+                eventClass="danger"
               />
               <HistoryItem
                 color={Colors.grey200}
@@ -39,12 +41,14 @@ class OurHistory extends Component {
                 imgSrc="/img/praga.jpg"
                 text="history.empty"
                 inverted
+                eventClass="info"
               />
               <HistoryItem
                 color={Colors.grey200}
                 title="history.03"
                 imgSrc="/img/paris_1.jpg"
                 text="history.empty"
+                eventClass="success"
               />
               <HistoryItem
                 color={Colors.grey200}
@@ -55,22 +59,25 @@ class OurHistory extends Component {
               />
               <HistoryItem
                 color={Colors.grey200}
-                title="history.05"
-                imgSrc="/img/mitja_marato.jpg"
-                text="history.empty"
-              />
-              <HistoryItem
-                color={Colors.grey200}
                 title="history.06"
                 imgSrc="/img/ourHistory.jpg"
                 text="history.empty"
                 inverted
+                eventClass="warning"
+              />
+              <HistoryItem
+                color={Colors.grey200}
+                title="history.05"
+                imgSrc="/img/mitja_marato.jpg"
+                text="history.empty"
+                eventClass="danger"
               />
               <HistoryItem
                 color={Colors.grey200}
                 title="history.07"
                 imgSrc="/img/menorca.jpg"
                 text="history.empty"
+                eventClass="info"
               />
               <HistoryItem
                 color={Colors.grey200}
@@ -78,6 +85,7 @@ class OurHistory extends Component {
                 imgSrc="/img/el_nostre_fill.jpg"
                 text="history.empty"
                 inverted
+                eventClass="success"
               />
               <HistoryItem
                 color={Colors.grey200}
@@ -91,6 +99,7 @@ class OurHistory extends Component {
                 imgSrc="/img/ny.jpg"
                 text="history.11"
                 inverted
+                eventClass="danger"
               />
             </ul>
         </div>
