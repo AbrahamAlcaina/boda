@@ -7,6 +7,7 @@ const CHANGE_NEED_PLACE = 'CHANGE_NEED_PLACE';
 const initialState = Immutable.fromJS({
   loaded: false
 });
+const url = "http://nicoleiabraham.com/graphql";
 
 export default handleActions({
   LOAD_GUEST_LOADING: (state) => state.set({ loading: true }),
@@ -70,7 +71,7 @@ const getUser = `
           }`;
 export const loadGuests = createAction(LOAD_GUEST, () => ({
   promise: new Promise(resolve =>
-    fetch('/graphql', {
+    fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/graphql'
@@ -89,7 +90,7 @@ export const loadGuests = createAction(LOAD_GUEST, () => ({
 
 export const changeAttend = createAction(CHANGE_ATTEND, (id, attend) => ({
   promise: new Promise(resolve =>
-    fetch('/graphql', {
+    fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/graphql'
@@ -116,7 +117,7 @@ export const changeAttend = createAction(CHANGE_ATTEND, (id, attend) => ({
 
 export const changeNeedPlace = createAction(CHANGE_NEED_PLACE, (id, needPlace) => ({
   promise: new Promise(resolve =>
-    fetch('/graphql', {
+    fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/graphql'
