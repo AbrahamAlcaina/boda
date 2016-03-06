@@ -8,21 +8,23 @@ import { FormattedMessage } from 'react-intl';
 class Place extends Component {
     render() {
       return (
-          <div>
+          <div >
               <Helmet title="place" />
-              <h1>
-                <FormattedMessage
-                  id="home.placePlace"
-                />
-              </h1>
-              <div className="row">
-                <p>
-                  <FormattedMessage id="place.01" />
-                </p>
-                <img
-                  className="img-responsive"
-                  src="/img/celebrem_00.jpg"
-                />
+                <div className="row">
+                  <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
+                    <h1>
+                      <FormattedMessage
+                        id="home.placePlace"
+                      />
+                    </h1>
+                    <p>
+                      <FormattedMessage id="place.01" />
+                    </p>
+                    <img
+                      className="img-responsive"
+                      src="/img/celebrem_00.jpg"
+                    />
+                </div>
               </div>
           </div>
       );
