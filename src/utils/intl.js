@@ -4,7 +4,7 @@ import * as path from 'path';
 import locale from 'locale';
 
 export const defaultLocale = 'ca';
-export const defaultLocales = ['ca', 'nl'];
+export const defaultLocales = ['ca', 'en'];
 
 const getDefaultLocale = () => defaultLocale;
 
