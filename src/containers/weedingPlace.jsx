@@ -10,15 +10,20 @@ class WeddingPlace extends Component {
       return (
           <div>
               <Helmet title="weedingPlace" />
-              <h1>
-                <FormattedMessage
-                  id="home.weddingPlace"
-                />
-              </h1>
               <div className="row">
-                <FormattedMessage id="weddingplace.01" />
-                <br />
-                <div className="responsive-video">
+                <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
+                  <h1>
+                    <FormattedMessage
+                      id="home.weddingPlace"
+                    />
+                  </h1>
+                  <p>
+                    <FormattedMessage id="weddingplace.01" />
+                  </p>
+                </div>
+              </div>
+              <div className="row">
+                <div className="responsive-video col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
                     <iframe
                       frameBorder="0"
                       src="//www.youtube.com/embed/8a0mTUbaGOc"

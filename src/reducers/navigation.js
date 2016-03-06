@@ -59,8 +59,8 @@ export const loadNavigationOptions = createAction(LOAD_NAVIGATION, () => ({
         title: 'nav.right.ourHistory'
       },
       {
-        path: '/weeding-list',
-        name: 'weedingList',
+        path: '/honey-moon',
+        name: 'honeyMoon',
         title: 'nav.right.weedingList'
       },
     ];

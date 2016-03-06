@@ -13,7 +13,7 @@ class WeekendPlan extends Component {
     intl: intlShape.isRequired
   };
 
-  onClick = () => browserHistory.push('/weeding-list');
+  onClick = () => browserHistory.push('/honey-moon');
 
   render() {
     const { formatMessage } = this.props.intl;

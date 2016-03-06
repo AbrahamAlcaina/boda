@@ -29,11 +29,15 @@ class Guests extends Component {
       return (
           <div>
               <Helmet title="guests" />
-              <h1>
-                <FormattedMessage
-                  id="home.guests"
-                />
-              </h1>
+              <div className="row">
+                <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
+                  <h1>
+                    <FormattedMessage
+                      id="home.guests"
+                    />
+                  </h1>
+                </div>
+              </div>
               <div className="row">
                 <FamilyBDNCard />
                 <FamilyTrempCard />

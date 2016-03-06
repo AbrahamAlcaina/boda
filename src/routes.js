@@ -12,7 +12,7 @@ export default (
         <Route path="/guests" component= {containers.Guests} />
         <Route path="/guests-list/:group" component= {containers.GuestsList} />
         <Route path="/our-history" component= {containers.OurHistory} />
-        <Route path="/weeding-list" component= {containers.WeedingList} />
+        <Route path="/honey-moon" component= {containers.WeedingList} />
         <Route path="*" component={containers.NoMatch} />
     </Route>
 );

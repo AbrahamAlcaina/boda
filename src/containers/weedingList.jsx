@@ -10,18 +10,28 @@ class WeedingList extends Component {
       return (
           <div>
               <Helmet title="weedingList" />
-                <h1>
-                  <FormattedMessage
-                    id="home.weedingList"
-                  />
-                </h1>
                 <div className="row">
-                  <FormattedMessage id="honeymoon.01" />
-                  <img
-                    className="img-responsive"
-                    src="/img/ny.jpg"
-                  />
-                  <FormattedMessage id="honeymoon.02" />
+                  <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
+                    <h1>
+                      <FormattedMessage
+                        id="home.weedingList"
+                      />
+                    </h1>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
+                    <p>
+                      <FormattedMessage id="honeymoon.01" />
+                    </p>
+                    <img
+                      className="img-responsive"
+                      src="/img/ny.jpg"
+                    />
+                    <p>
+                      <FormattedMessage id="honeymoon.02" />
+                    </p>
+                  </div>
                 </div>
           </div>
       );

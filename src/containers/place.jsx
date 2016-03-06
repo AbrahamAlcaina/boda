@@ -16,11 +16,13 @@ class Place extends Component {
                 />
               </h1>
               <div className="row">
+                <p>
+                  <FormattedMessage id="place.01" />
+                </p>
                 <img
                   className="img-responsive"
                   src="/img/celebrem_00.jpg"
                 />
-                <FormattedMessage id="place.01" />
               </div>
           </div>
       );

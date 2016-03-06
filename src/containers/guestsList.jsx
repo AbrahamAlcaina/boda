@@ -8,8 +8,6 @@ import ListItem from 'material-ui/lib/lists/list-item';
 import Divider from 'material-ui/lib/divider';
 import Checkbox from 'material-ui/lib/checkbox';
 import * as guestActions from '../reducers/guests';
-import RadioButton from 'material-ui/lib/radio-button';
-import RadioButtonGroup from 'material-ui/lib/radio-button-group';
 import { Snackbar } from '../components/organism';
 import OK from 'material-ui/lib/svg-icons/social/mood';
 import KO from 'material-ui/lib/svg-icons/social/mood-bad';
@@ -58,24 +56,16 @@ class GuestList extends Component {
 
     onChangeAttend = (id, attend) => {
       this.props.changeAttend(id, attend);
-      if (attend) {
-        message = attendNode;
-      }
-      else {
-        message = noattendNode;
-      }
+      message = attend ? attendNode : noattendNode;
       this.refs.snackbar.handleTouchTap();
-    }
+    };
+
     onChangePlace = (id, attend) => {
       this.props.changeNeedPlace(id, attend);
-      if (attend) {
-        message = placeNode;
-      }
-      else {
-        message = noplaceNode;
-      }
+      message = attend ? placeNode : noplaceNode;
       this.refs.snackbar.handleTouchTap();
-    ;};
+    };
+
     render() {
       const group = this.props.params.group;
       const guests = (this.props.guests || [])
@@ -104,7 +94,7 @@ class GuestList extends Component {
                           primaryText={<FormattedMessage id="guestList.noattend" />}
                           leftIcon={
                               <Checkbox
-                                checked={!guest.get('attend')}
+                                checked={guest.get('attend') === false}
                                 onCheck={this.onChangeAttend.bind(this, guest.get('id'), false)}
                               />
                           }

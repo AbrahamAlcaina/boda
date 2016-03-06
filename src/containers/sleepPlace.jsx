@@ -8,25 +8,33 @@ import * as navigationActions from '../reducers/navigation';
 class SleepPlace extends Component {
     render() {
       return (
-          <div>
+          <div className="row">
               <Helmet title="sleepPlace" />
-              <h1>
-                <FormattedMessage
-                  id="home.sleepPlace"
-                />
-              </h1>
               <div className="row">
-                <FormattedMessage id="sleepplace.01" />
-                <img
-                  className="img-responsive"
-                  src="/img/bungalows.jpg"
-                />
-              <FormattedMessage id="sleepplace.02" />
-                <img
-                  className="img-responsive"
-                  src="/img/mapa_camping.jpg"
-                />
-              <FormattedMessage id="sleepplace.03" />
+                <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
+                  <h1>
+                    <FormattedMessage
+                      id="home.sleepPlace"
+                    />
+                  </h1>
+                  <p>
+                    <FormattedMessage id="sleepplace.01" />
+                  </p>
+                  <img
+                    className="img-responsive"
+                    src="/img/bungalows.jpg"
+                  />
+                  <p>
+                    <FormattedMessage id="sleepplace.02" />
+                  </p>
+                  <img
+                    className="img-responsive"
+                    src="/img/mapa_camping.jpg"
+                  />
+                  <p>
+                    <FormattedMessage id="sleepplace.03" />
+                  </p>
+                </div>
               </div>
           </div>
       );
