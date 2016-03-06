@@ -20,20 +20,23 @@ class SleepPlace extends Component {
                   <p>
                     <FormattedMessage id="sleepplace.01" />
                   </p>
-                  <img
-                    className="img-responsive"
-                    src="/img/bungalows.jpg"
-                  />
+                  <p>
+                    <FormattedMessage id="sleepplace.04" />
+                  </p>
                   <p>
                     <FormattedMessage id="sleepplace.02" />
                   </p>
                   <img
                     className="img-responsive"
-                    src="/img/mapa_camping.jpg"
+                    src="/img/bungalows.jpg"
                   />
                   <p>
                     <FormattedMessage id="sleepplace.03" />
                   </p>
+                  <img
+                    className="img-responsive"
+                    src="/img/mapa_camping.jpg"
+                  />
                 </div>
               </div>
           </div>

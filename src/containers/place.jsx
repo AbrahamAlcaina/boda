@@ -24,6 +24,20 @@ class Place extends Component {
                       className="img-responsive"
                       src="/img/celebrem_00.jpg"
                     />
+                    <p>
+                      <FormattedMessage id="place.02" />
+                    </p>
+                    <img
+                      className="img-responsive"
+                      src="/img/celebrem_01.jpg"
+                    />
+                    <p>
+                      <FormattedMessage id="place.03" />
+                    </p>
+                    <img
+                      className="img-responsive"
+                      src="/img/celebrem_02.jpg"
+                    />
                 </div>
               </div>
           </div>

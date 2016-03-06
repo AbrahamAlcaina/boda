@@ -36,7 +36,7 @@
   "guest.friends-tremp" : "Amics Pallars",
   "weekendPlan.welcome": "Benvinguda",
   "weekendPlan.welcomeP": "Per aprofitar tot el cap de setmana al camping podeu pujar divendres 27 de maig. \n  Assignarem els bungalows i us deixarem les claus a la porta. Pròximament podreu veure en la secció",
-   "weekendPlan.welcomeP2": "com han quedat assignats els bungalows \n",
+  "weekendPlan.welcomeP2": "com han quedat assignats els bungalows \n",
   "weekendPlan.weeding": "Casament",
   "weekendPlan.weedingP": "La cerimònia començarà a les 17h però podeu anar a pujar sobre les 16h.",
   "weekendPlan.weedingP2": "Malauradament llençar arròs als nuvis al jardí de casa està prohibit, així que a canvi us oferirem pètals de rosa.",
@@ -65,10 +65,13 @@
   "Snackbar.place": "Construïnt el teu bungalow",
   "Snackbar.noplace": "Burn, burn, burn bungalow",
   "weddingplace.01": "Ens casarem al jardí de casa Sisquet a Montcortès. La casa on va néixer el pare de la Nicole i ara acomodada com a casa rural. Feu una ullada al video de la casa",
-  "place.01":"Ho celebrarem al camping de Senterada. On menjarem i ballarem fins que el cos aguanti.",
-  "sleepplace.01":"Tots aquells que necessiteu allotjament tindreu a la vostra diposició els bungalows del camping. Us assignarem bungalows un cop sapiguem qui vindrà. Això sí, recordeu de portar llençols de casa.\n",
-  "sleepplace.02":"Podeu portar el vostre gos al camping pero recordeu que ha d'anar sempre lligat",
-  "sleepplace.03":"En aquest mapa podeu veure la distribució dels bungalows. Més endavant publicarem l'assignació de bungalows per famílies",
-  "honeymoon.01":"Com a lluna de mel volem anar a Nova York! Volem disfrutar de Central Park, visitar l'Estatua de la Llibretat, Times Square, el Empire State i molt més..",
-  "honeymoon.02":"Molts de vosaltres ja ens heu dit que voleu contribuir en aquest viatge i a pesar de que no cal dir que el millor regal es la vostra presència el dia de la boda aquí us deixem el nostre número de compte [ES06 2100 0302 6101 0205 4510]."
+  "place.01" : "Ho celebrarem al restaurant del camping. On menjarem i ballarem fins que el cos aguanti.",
+  "place.02" : "Els nens podran jugar i pasar-s'ho bé en el parc infantil.",
+  "place.03" : "O amb els animals de la granja.",
+  "sleepplace.01" : "Tots aquells que necessiteu allotjament tindreu a la vostra diposició els bungalows del camping. Us els assignarem un cop sapiguem qui vindrà. Això sí, recordeu de portar llençols de casa.",
+  "sleepplace.02" : "Podeu portar el vostre gos però recordeu que ha d'anar sempre lligat",
+  "sleepplace.04" : "A cada bungalow hi ha una petita cuina i lavabo.",
+  "sleepplace.03" : "En aquest mapa podeu veure la distribució dels bungalows. Més endavant publicarem l'assignació de bungalows per famílies",
+  "honeymoon.01" : "Com a lluna de mel volem anar a Nova York! Volem disfrutar de Central Park, visitar l'Estatua de la Llibretat, Times Square, el Empire State i molt més..",
+  "honeymoon.02" : "Molts de vosaltres ja ens heu dit que voleu contribuir en aquest viatge i a pesar de que no cal dir que el millor regal es la vostra presència el dia de la boda aquí us deixem el nostre número de compte [ES06 2100 0302 6101 0205 4510]."
 }
