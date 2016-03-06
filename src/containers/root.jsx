@@ -53,8 +53,9 @@ class Root extends Component {
   render() {
     const head = this.props.head;
     return (
-      <html style={styles.html}>
+      <html style={styles.html} lang="ca">
         <head>
+          <meta httpEquiv="content-language" content="ca" />
           <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png" />
           <link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png" />
           <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon-72x72.png" />
