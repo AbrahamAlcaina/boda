@@ -4,6 +4,11 @@ import Card from 'material-ui/lib/card/card';
 import CardHeader from 'material-ui/lib/card/card-header';
 import CardMedia from 'material-ui/lib/card/card-media';
 import { browserHistory } from 'react-router';
+import FlatButton from 'material-ui/lib/flat-button';
+import { FormattedMessage } from 'react-intl';
+import CardActions from 'material-ui/lib/card/card-actions';
+import Colors from 'material-ui/lib/styles/colors';
+import Link from 'material-ui/lib/svg-icons/navigation/arrow-forward';
 import style from './card.style';
 
 class FriendsBCNCard extends Component {
@@ -33,6 +38,21 @@ class FriendsBCNCard extends Component {
         <CardMedia>
           <img src="img/friendsBCN.jpg" className="img-responsive"/>
         </CardMedia>
+        <CardActions>
+          <FlatButton
+            style={{
+              margin: 12, float: 'right'
+            }}
+            label={
+              <FormattedMessage id="go" />
+            }
+            primary
+            icon={
+              <Link color={Colors.pinkA400} />
+            }
+            labelPosition="before"
+          />
+        </CardActions>
       </Card>
     </div>
       );
