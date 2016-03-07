@@ -105,6 +105,7 @@ class Root extends Component {
             {this.renderInitialState()}
             {this.renderLocale()}
             {head.script.toComponent()}
+            <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Intl.~locale.en,Intl.~locale.ca"></script>
             <script src={!process.env.NODE_ENV ? '/app.js' : '/dist/app.min.js'}></script>
         </body>
       </html>
