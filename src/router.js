@@ -11,7 +11,7 @@ import { getCurrentLocale, translations } from './utils/intl';
 import { IntlProvider } from 'react-intl';
 import css from './utils/loadCss';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-
+var ga = require('react-ga');
 // Needed for onTouchTap
 // Can go away when react 1.0 release
 // Check this repo:
@@ -27,6 +27,7 @@ if (isClient) {
     locale,
     localeMessages
   } = window.__LANGUAGE__;
+  ga.initialize('UA-74754850-1');
   ReactDOM.render(
         <IntlProvider locale={locale} messages={localeMessages} defaultLocale="ca">
           <Provider store={store}>

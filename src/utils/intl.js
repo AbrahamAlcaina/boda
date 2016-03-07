@@ -4,7 +4,7 @@ import * as path from 'path';
 import locale from 'locale';
 
 export const defaultLocale = 'ca';
-export const defaultLocales = ['ca', 'nl'];
+export const defaultLocales = ['ca', 'en'];
 
 const getDefaultLocale = () => defaultLocale;
 
@@ -31,5 +31,7 @@ export function getCurrentLocale(req) {
   if (!locales.best(supported)) {
     return getDefaultLocale();
   }
-  return locales.best(supported).toString();
+  return getDefaultLocale();
+  // temp fix
+  //return locales.best(supported).toString();
 }
