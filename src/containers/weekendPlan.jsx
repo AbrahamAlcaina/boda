@@ -9,7 +9,7 @@ class WeekendPlan extends Component {
         <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
           <h1>
             <FormattedMessage
-              id="home.weddingPlace"
+              id="home.weekendPlan"
             /></h1>
           <h2>
             <FormattedMessage
