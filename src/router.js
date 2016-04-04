@@ -19,8 +19,8 @@ var ga = require('react-ga');
 injectTapEventPlugin();
 
 import { addLocaleData } from 'react-intl';
-import en from 'react-intl/dist/locale-data/en';
-import ca from 'react-intl/dist/locale-data/ca';
+import en from 'react-intl/locale-data/en';
+import ca from 'react-intl/locale-data/ca';
 addLocaleData(en);
 addLocaleData(ca);
 
