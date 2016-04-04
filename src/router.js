@@ -18,6 +18,11 @@ var ga = require('react-ga');
 // https://github.com/zilverline/react-tap-event-plugin
 injectTapEventPlugin();
 
+import { addLocaleData } from 'react-intl';
+import en from 'react-intl/dist/locale-data/en';
+import ca from 'react-intl/dist/locale-data/ca';
+addLocaleData(en);
+addLocaleData(ca);
 
 const isClient = typeof document !== 'undefined';
 

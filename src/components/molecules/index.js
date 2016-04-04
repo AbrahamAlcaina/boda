@@ -14,3 +14,4 @@ export FriendsBCNCard from './friendsBCNCard';
 export FriendsBDNCard from './friendsBDNCard';
 export FriendsTrempCard from './friendsTrempCard';
 export HistoryItem from './historyItem';
+export CountDown from './countdown';
